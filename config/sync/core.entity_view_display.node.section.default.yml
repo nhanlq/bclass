@@ -1,0 +1,28 @@
+uuid: 117bf299-c4a8-4773-9ffc-a81951a23a44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.section.description
+    - node.type.section
+  module:
+    - text
+    - user
+id: node.section.default
+targetEntityType: node
+bundle: section
+mode: default
+content:
+  description:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

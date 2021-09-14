@@ -1,0 +1,33 @@
+uuid: fc53a720-a832-4f1b-bfb3-03ccf8870e59
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.quiz_type
+field_name: quiz_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: R
+      label: Reading
+    -
+      value: L
+      label: Listening
+    -
+      value: W
+      label: Writing
+    -
+      value: S
+      label: Speaking
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

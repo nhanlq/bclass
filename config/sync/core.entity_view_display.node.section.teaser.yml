@@ -1,0 +1,22 @@
+uuid: 07bcc019-d200-438c-94e1-c42fc3bde0b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.section.description
+    - node.type.section
+  module:
+    - user
+id: node.section.teaser
+targetEntityType: node
+bundle: section
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  description: true

@@ -1,0 +1,26 @@
+uuid: a33bb083-daab-4990-b7a8-3dd12e873526
+langcode: en
+status: true
+dependencies:
+  config:
+    - quiz.question.type.page
+  enforced:
+    module:
+      - quiz_page
+  module:
+    - text
+_core:
+  default_config_hash: 85aXetVeccejDGKEns93Cm8M6V1pNQI9PZAUE_-0f2k
+id: quiz_question.page.default
+targetEntityType: quiz_question
+bundle: page
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,19 @@
+uuid: 5073171b-49aa-4430-ae40-7958072f6938
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.description
+field_name: description
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

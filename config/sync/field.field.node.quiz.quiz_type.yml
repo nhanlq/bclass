@@ -1,0 +1,21 @@
+uuid: b1dac447-8e9b-4690-b1b8-944d74371324
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.quiz_type
+    - node.type.quiz
+  module:
+    - options
+id: node.quiz.quiz_type
+field_name: quiz_type
+entity_type: node
+bundle: quiz
+label: 'Quiz Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

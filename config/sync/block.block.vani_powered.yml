@@ -1,0 +1,22 @@
+uuid: 4160843b-53fc-4252-8c70-4e578d5e1e2d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vani
+_core:
+  default_config_hash: ZWo7RK3znM_xBRLwi9PsZnM6PJA3G9Mx6zFC2KwCe1M
+id: vani_powered
+theme: vani
+region: hidden_blocks
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

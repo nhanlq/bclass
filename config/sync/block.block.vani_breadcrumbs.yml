@@ -1,0 +1,22 @@
+uuid: 05108ccc-d502-47ce-8963-aeec4aaf3413
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vani
+_core:
+  default_config_hash: s70XdZoJ_p7c5HMD8qwb4ZBdBUrqsMPFEq_WQx2j0IQ
+id: vani_breadcrumbs
+theme: vani
+region: page_header
+weight: -5
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

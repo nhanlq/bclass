@@ -1,0 +1,26 @@
+uuid: f96bb15f-e8a9-40d7-a209-615f21f05af0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.quiz_result_answer.long_answer
+    - quiz.result.answer.type.long_answer
+  enforced:
+    module:
+      - quiz_long_answer
+  module:
+    - text
+_core:
+  default_config_hash: gNp5vGEkOZPO0Ct_jnuJE4VzGVWd1MLzgV1yrUsXcKY
+id: quiz_result_answer.long_answer.long_answer
+field_name: long_answer
+entity_type: quiz_result_answer
+bundle: long_answer
+label: 'Long answer'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

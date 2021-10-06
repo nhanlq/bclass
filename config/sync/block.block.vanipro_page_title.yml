@@ -1,0 +1,20 @@
+uuid: d10e9131-64a3-4a99-8773-eb72d69de7b2
+langcode: en
+status: true
+dependencies:
+  theme:
+    - vanipro
+_core:
+  default_config_hash: e0g0dANhsecaFwcooDh3LQc6s5LyzgLBCxJFKabH3NM
+id: vanipro_page_title
+theme: vanipro
+region: page_header
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: 184e7537-dd5e-4b57-85d7-43d0560e9754
+langcode: en
+status: false
+dependencies:
+  module:
+    - banner
+    - system
+  theme:
+    - vanipro
+id: bannerhomeslider
+theme: vanipro
+region: home_slider
+weight: 0
+provider: null
+plugin: banner_home
+settings:
+  id: banner_home
+  label: 'Banner Home Slider'
+  provider: banner
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

@@ -1,0 +1,27 @@
+uuid: 274d6a70-e103-4550-848c-1b8f41636f6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - vanipro
+_core:
+  default_config_hash: _bCPKAmiHaUrsH0MkH_dB1XfC7_zbytVSfs6zEmNKmU
+id: vanipro_account_menu
+theme: vanipro
+region: hidden_blocks
+weight: -5
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

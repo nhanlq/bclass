@@ -1,4 +1,4 @@
-uuid: 999dae72-359d-46b8-9858-45f60eefcf14
+uuid: 8606113b-a422-46ed-8fef-47536f394256
 langcode: en
 status: true
 dependencies:
@@ -12,6 +12,6 @@ name: Section
 type: section
 description: ''
 help: ''
-new_revision: true
+new_revision: false
 preview_mode: 1
-display_submitted: true
+display_submitted: false

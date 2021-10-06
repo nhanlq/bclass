@@ -1,28 +1,56 @@
-uuid: 117bf299-c4a8-4773-9ffc-a81951a23a44
+uuid: c74d8e78-9f1d-419e-9a2d-fca99ee3d95e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.section.description
+    - field.field.node.section.body
+    - field.field.node.section.questions
+    - field.field.node.section.quiz
     - node.type.section
   module:
+    - entity_reference_revisions
+    - field_layout
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.section.default
 targetEntityType: node
 bundle: section
 mode: default
 content:
-  description:
+  body:
+    label: hidden
+    type: text_default
     weight: 101
-    label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
     region: content
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+  questions:
+    type: entity_reference_revisions_entity_view
+    weight: 103
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  quiz:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  langcode: true

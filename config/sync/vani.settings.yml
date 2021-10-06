@@ -11,7 +11,7 @@ github_url: 'https://github.com/'
 vk_url: ''
 slider_show: 1
 slider_code: ''
-slider_image: {  }
+slider_image: ''
 slider_image_path: ''
 front_sidebar: 0
 comment_user_pic: 1
@@ -25,16 +25,3 @@ styling: 0
 styling_code: ''
 _core:
   default_config_hash: S0NyT1Vk-XqW9Wd-H6zu491WbVDxplBrm0kbiBEFfIs
-features:
-  node_user_picture: true
-  comment_user_picture: true
-  comment_user_verification: true
-  favicon: true
-logo:
-  use_default: false
-  path: 'public://bot-logo-grey.png'
-favicon:
-  use_default: false
-  path: 'public://bot-logo_0.png'
-  mimetype: image/png
-font_icon_fontawesome5: 0

@@ -1,28 +1,42 @@
-uuid: 18c7e03f-81ba-4162-84f2-522554410e39
+uuid: 707cce70-5a4c-4f7d-b2bb-d839bece2b5d
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.quiz.description
-    - field.field.node.quiz.quiz_type
-    - field.field.node.quiz.section
-    - field.field.node.quiz.video
+    - field.field.node.quiz.body
+    - field.field.node.quiz.category
+    - field.field.node.quiz.media
     - node.type.quiz
   module:
+    - field_layout
+    - layout_discovery
+    - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.quiz.teaser
 targetEntityType: node
 bundle: quiz
 mode: teaser
 content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
     region: content
 hidden:
-  description: true
-  quiz_type: true
-  section: true
-  video: true
+  category: true
+  langcode: true
+  media: true

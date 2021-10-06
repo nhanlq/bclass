@@ -1,0 +1,29 @@
+uuid: cd4400f7-7921-4eae-81d5-be18fb254394
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.category
+    - node.type.quiz
+    - taxonomy.vocabulary.category
+id: node.quiz.category
+field_name: category
+entity_type: node
+bundle: quiz
+label: Category
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      category: category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

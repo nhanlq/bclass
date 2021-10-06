@@ -1,0 +1,23 @@
+uuid: 4060e08a-b0b6-4110-906c-7da23264825a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.correct
+    - paragraphs.paragraphs_type.single_choice
+id: paragraph.single_choice.correct
+field_name: correct
+entity_type: paragraph
+bundle: single_choice
+label: Correct
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

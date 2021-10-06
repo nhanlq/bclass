@@ -1,0 +1,39 @@
+uuid: 53bc04e0-358d-4a60-bf25-cd08cb19c8d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.multiple_choice.answer
+    - field.field.paragraph.multiple_choice.correct
+    - paragraphs.paragraphs_type.multiple_choice
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.multiple_choice.default
+targetEntityType: paragraph
+bundle: multiple_choice
+mode: default
+content:
+  answer:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  correct:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+hidden:
+  created: true
+  status: true

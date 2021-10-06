@@ -1,0 +1,22 @@
+palette:
+  headertop: '#ffffff'
+  top: '#ffffff'
+  bottom: '#232733'
+  bg: '#ffffff'
+  text: '#2a2a2a'
+  heading: '#1e2127'
+  border: '#e9ebf5'
+  bordercontent: '#ced1e4'
+  footercolor: '#919296'
+  footerborder: '#373b48'
+  themeone: '#68C2E8'
+  themetwo: '#00875f'
+  circleone: '#68C2E8'
+  circletwo: '#90D979'
+  circlethree: '#F79999'
+logo: 'public://color/vanipro-908a4407/logo.svg'
+stylesheets:
+  - 'public://color/vanipro-908a4407/colors.css'
+files:
+  - 'public://color/vanipro-908a4407/logo.svg'
+  - 'public://color/vanipro-908a4407/colors.css'

@@ -1,0 +1,40 @@
+uuid: 53ee43ef-a2d3-4ec9-aa73-b1f711daaf0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.question.answers
+    - field.field.paragraph.question.question
+    - paragraphs.paragraphs_type.question
+  module:
+    - entity_reference_revisions
+    - field_layout
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.question.default
+targetEntityType: paragraph
+bundle: question
+mode: default
+content:
+  answers:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  question:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

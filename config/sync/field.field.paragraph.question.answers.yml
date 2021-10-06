@@ -1,0 +1,37 @@
+uuid: 46baa1eb-3f1c-4c0f-801e-93c3d4dd5c7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.answers
+    - paragraphs.paragraphs_type.question
+    - paragraphs.paragraphs_type.single_choice
+  module:
+    - entity_reference_revisions
+id: paragraph.question.answers
+field_name: answers
+entity_type: paragraph
+bundle: question
+label: Answers
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      single_choice: single_choice
+    target_bundles_drag_drop:
+      multiple_choice:
+        weight: 5
+        enabled: false
+      question:
+        weight: 4
+        enabled: false
+      single_choice:
+        enabled: true
+        weight: 6
+field_type: entity_reference_revisions

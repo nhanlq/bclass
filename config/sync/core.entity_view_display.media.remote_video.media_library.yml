@@ -1,4 +1,4 @@
-uuid: 44bd7cab-0552-4b34-aba6-35192816cac4
+uuid: df67f84c-ddb0-4529-9bc1-c86509e7f7f4
 langcode: en
 status: true
 dependencies:
@@ -8,7 +8,14 @@ dependencies:
     - image.style.medium
     - media.type.remote_video
   module:
+    - field_layout
     - image
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: sLyo3lc_eX4-C1Jv0ivqjuORGfdclLsX09tZf7K3EVM
 id: media.remote_video.media_library
@@ -28,5 +35,6 @@ content:
 hidden:
   created: true
   field_media_oembed_video: true
+  langcode: true
   name: true
   uid: true

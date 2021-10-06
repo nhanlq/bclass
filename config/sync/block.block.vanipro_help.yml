@@ -1,0 +1,22 @@
+uuid: e451b95b-05b0-494b-9f75-3d0ac26dfd31
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - vanipro
+_core:
+  default_config_hash: 3PDatiMDy_AEH86LBAgT7NHqrhVspaFSz9c4jYCwmeY
+id: vanipro_help
+theme: vanipro
+region: content
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

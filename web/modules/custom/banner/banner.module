@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function banner_theme($existing, $type, $theme, $path) {
+  return [
+    'slider_home' => [
+      'variables' => [
+        'nodes' => NULL,
+        'cache' => [
+          'max-age' => 1
+        ]
+      ]
+    ]
+  ];
+}
+
+/**
+ * @return array
+ */
+function getBanner(){
+  $ids = \Drupal::entityQuery('node')
+    ->condition('type','banner')
+    ->condition('status',1)
+    ->sort('created','ASC')
+    ->execute();
+  $nodes = \Drupal\node\Entity\Node::loadMultiple($ids);
+  return[
+    '#theme' =>['slider_home'],
+    '#nodes' =>$nodes,
+  ];
+}

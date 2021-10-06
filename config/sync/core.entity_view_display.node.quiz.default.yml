@@ -1,50 +1,48 @@
-uuid: 1aa4662a-29a7-42b9-a4fb-aaf9c164f89f
+uuid: 456a887c-8b71-457c-9545-8d45c089d959
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.quiz.description
-    - field.field.node.quiz.quiz_type
-    - field.field.node.quiz.section
-    - field.field.node.quiz.video
+    - field.field.node.quiz.body
+    - field.field.node.quiz.category
+    - field.field.node.quiz.media
     - node.type.quiz
   module:
-    - options
+    - field_layout
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.quiz.default
 targetEntityType: node
 bundle: quiz
 mode: default
 content:
-  description:
-    weight: 101
-    label: above
-    settings: {  }
-    third_party_settings: {  }
+  body:
+    label: hidden
     type: text_default
-    region: content
-  links:
-    weight: 100
+    weight: 101
     settings: {  }
     third_party_settings: {  }
     region: content
-  quiz_type:
+  category:
     weight: 102
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  section:
-    weight: 104
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  video:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  media:
     type: entity_reference_entity_view
     weight: 103
     label: above
@@ -53,4 +51,5 @@ content:
       link: false
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  langcode: true

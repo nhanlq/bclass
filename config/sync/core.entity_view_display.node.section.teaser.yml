@@ -1,22 +1,42 @@
-uuid: 07bcc019-d200-438c-94e1-c42fc3bde0b8
+uuid: 6efdef94-54db-444c-89a9-e2b4ad69b74f
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.section.description
+    - field.field.node.section.body
+    - field.field.node.section.questions
+    - field.field.node.section.quiz
     - node.type.section
   module:
+    - field_layout
+    - layout_discovery
+    - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.section.teaser
 targetEntityType: node
 bundle: section
 mode: teaser
 content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
     region: content
 hidden:
-  description: true
+  langcode: true
+  questions: true
+  quiz: true

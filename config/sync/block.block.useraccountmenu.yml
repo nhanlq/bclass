@@ -1,0 +1,25 @@
+uuid: 68d11bc7-913d-4b17-9df4-a8bb6875091d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - vanipro
+id: useraccountmenu
+theme: vanipro
+region: sidebar_sliding
+weight: 0
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'My Profile'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

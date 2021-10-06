@@ -1,4 +1,4 @@
-uuid: 30532e5f-17ef-4b32-ad6a-4d8e0818b6e5
+uuid: bdabf707-9901-400a-9fda-22657265a6fb
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
     - taxonomy
     - user
 _core:
-  default_config_hash: uvMAn5Qf8Uni989mhr5KY4hx66xkSpP8nFYZMHgj7kY
+  default_config_hash: ZptEEU9Oid5HG0xwMVHE5HdrocHzj7PybwJZ_0LNimY
 id: taxonomy_term
 label: 'Taxonomy term'
 module: taxonomy
@@ -20,7 +20,7 @@ base_field: nid
 display:
   default:
     id: default
-    display_title: Master
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:

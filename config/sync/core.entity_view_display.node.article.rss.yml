@@ -1,4 +1,4 @@
-uuid: 86ff905b-9301-4258-97cc-57e2402383b5
+uuid: 98874277-9219-4043-a69e-2d16b3b7a1d7
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,14 @@ dependencies:
     - field.field.node.article.field_tags
     - node.type.article
   module:
+    - field_layout
+    - layout_discovery
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: 2rIr6K5Q0UQ9khg0zE_CK-PtJH76UL-BDDZcZnZzwCc
 id: node.article.rss
@@ -26,3 +33,4 @@ hidden:
   comment: true
   field_image: true
   field_tags: true
+  langcode: true

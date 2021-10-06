@@ -1,0 +1,88 @@
+/* Homepage
+--------------------------------------*/
+/* Homepage -> Main */
+.home-content {
+  padding-top: 1rem;
+}
+.home-block-cicle1 {
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  background: #f3e7f0;
+  background: var(--circle-one);
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  -webkit-animation: circle-size 4s linear infinite alternate;
+  animation: circle-size 4s linear infinite alternate;
+}
+.home-block-cicle2 {
+  position: absolute;
+  right: 5%;
+  bottom: 20%;
+  background: #f3e7f0;
+  background: var(--circle-two);
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  -webkit-animation: circle-size 7s linear infinite alternate;
+  animation: circle-size 7s linear infinite alternate;
+}
+.home-block-cicle3 {
+  position: absolute;
+  left: 3%;
+  bottom: 5%;
+  background: #f9b6b4;
+  background: var(--circle-three);
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  -webkit-animation: circle-move 5s linear infinite alternate;
+  animation: circle-move 5s linear infinite alternate;
+}
+
+/* Homepage -> Homepage content block region */
+.region-content-home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.region-content-home .block:nth-child(even) {
+  background: var(--content-bg);
+}
+.region-content-home .block {
+  padding: 4em 0;
+}
+
+/* Block title */
+.homepage-content .block-title {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.homepage-content .block-title::before {
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 2px;
+  background: var(--theme-color);
+  top: 50%;
+  -webkit-transform: translateX(-50px);
+      -ms-transform: translateX(-50px);
+          transform: translateX(-50px);
+}
+.homepage-content .block-title::after {
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 2px;
+  background: var(--theme-color);
+  top: 50%;
+  -webkit-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+      transform: translateX(10px);
+}

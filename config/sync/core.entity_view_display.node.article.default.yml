@@ -1,4 +1,4 @@
-uuid: d91eaa91-d2a9-4a49-b050-0b563977300c
+uuid: 91c8ac33-4bed-406d-bcc9-ef75d0ba5a13
 langcode: en
 status: true
 dependencies:
@@ -12,9 +12,16 @@ dependencies:
     - node.type.article
   module:
     - comment
+    - field_layout
     - image
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
 id: node.article.default
@@ -60,4 +67,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  langcode: true

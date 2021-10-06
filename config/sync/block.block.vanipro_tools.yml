@@ -1,0 +1,27 @@
+uuid: b94a1f8d-e1ce-407c-a5e3-8895e702a9d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - vanipro
+_core:
+  default_config_hash: T_N-Pb-VNlOb3Cdg_zOhEcfTOd_aMFOhnk8IfIZnXRw
+id: vanipro_tools
+theme: vanipro
+region: hidden_blocks
+weight: -7
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

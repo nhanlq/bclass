@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: single_choice
-label: 'Single Choice'
+label: 'Câu trả lời'
 icon_uuid: null
 icon_default: null
 description: ''

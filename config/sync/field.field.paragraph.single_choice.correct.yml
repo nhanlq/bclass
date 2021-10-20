@@ -9,7 +9,7 @@ id: paragraph.single_choice.correct
 field_name: correct
 entity_type: paragraph
 bundle: single_choice
-label: Correct
+label: 'Câu trả lời đúng'
 description: ''
 required: false
 translatable: false

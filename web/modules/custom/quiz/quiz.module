@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function quiz_theme($existing, $type, $theme, $path): array {
+  return [
+    'quiz' => [
+      'variables' => [
+        'nodes' => NULL,
+        'cache' => [
+          'max-age' => 1,
+        ],
+      ],
+    ],
+    'b1_practice_test' => [
+      'variables' => [
+        'terms' => NULL,
+        'cache' => [
+          'max-age' => 0,
+        ],
+      ],
+    ],
+  ];
+}
+

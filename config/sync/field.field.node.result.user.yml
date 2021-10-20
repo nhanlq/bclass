@@ -1,0 +1,29 @@
+uuid: 3a7c67df-2279-4a15-a873-b8f3c5f21814
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.user
+    - node.type.result
+id: node.result.user
+field_name: user
+entity_type: node
+bundle: result
+label: User
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

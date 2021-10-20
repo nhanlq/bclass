@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.section.audio
     - field.field.node.section.body
     - field.field.node.section.questions
     - field.field.node.section.quiz
@@ -23,6 +24,15 @@ targetEntityType: node
 bundle: section
 mode: default
 content:
+  audio:
+    type: entity_reference_entity_view
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
   body:
     label: hidden
     type: text_default

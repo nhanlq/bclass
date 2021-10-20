@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.quiz.body
-    - field.field.node.quiz.category
+    - field.field.node.quiz.collection
     - field.field.node.quiz.media
+    - field.field.node.quiz.quiz_type
+    - field.field.node.quiz.total_score
     - node.type.quiz
   module:
     - field_layout
@@ -25,7 +27,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 11
+    weight: 12
     settings:
       rows: 9
       placeholder: ''
@@ -33,8 +35,8 @@ content:
       show_summary: false
     third_party_settings: {  }
     region: content
-  category:
-    weight: 9
+  collection:
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -53,7 +55,7 @@ content:
       include_locked: true
     third_party_settings: {  }
   media:
-    weight: 10
+    weight: 11
     settings:
       media_types: {  }
     third_party_settings: {  }
@@ -72,6 +74,12 @@ content:
     weight: 5
     region: content
     third_party_settings: {  }
+  quiz_type:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   status:
     type: boolean_checkbox
     settings:
@@ -94,6 +102,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  total_score:
+    weight: 26
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
   translation:
     weight: 4
     region: content

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.question.answers
+    - field.field.paragraph.question.number
     - field.field.paragraph.question.question
     - paragraphs.paragraphs_type.question
   module:
@@ -23,7 +24,7 @@ mode: default
 content:
   answers:
     type: paragraphs
-    weight: 1
+    weight: 3
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -40,8 +41,15 @@ content:
         duplicate: duplicate
     third_party_settings: {  }
     region: content
-  question:
+  number:
     weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  question:
+    weight: 2
     settings:
       rows: 5
       placeholder: ''

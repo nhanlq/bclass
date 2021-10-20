@@ -3,7 +3,7 @@
  * @file
  * Contains vanipro theme override and preprocess functions.
  */
-
+use Drupal\node\Entity\Node;
 /**
  * Sanitise input urls.
  */
@@ -90,6 +90,18 @@ function vanipro_preprocess_page(array &$variables) {
 function vanipro_preprocess_node(array &$variables) {
 	$variables['node_author_pic'] = theme_get_setting('node_author_pic', 'vanipro');
 	$variables['node_tags'] = theme_get_setting('node_tags', 'vanipro');
+
+  if ($variables['node']->getType() == 'quiz') {
+    //get Collection
+    $variables['collection'] = Node::load($variables['node']->get('collection')->target_id);
+    //Get form
+    $form = \Drupal::formBuilder()->getForm('Drupal\quiz\Form\PracticeTestForm', $variables['node']->Id());
+    $variables['form_test'] = $form;
+  }
+  if($variables['node']->getType() == 'collection'){
+    $service = \Drupal::service('quiz.quiz_services');
+    $variables['test_links'] = $service->getLinks($variables['node']->id());
+  }
 }
 
 /* *

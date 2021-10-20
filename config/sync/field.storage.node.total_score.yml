@@ -1,0 +1,20 @@
+uuid: 33970ddb-eff0-431a-a1a7-143ae7ed4d7f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.total_score
+field_name: total_score
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

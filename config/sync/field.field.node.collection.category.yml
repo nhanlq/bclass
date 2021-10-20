@@ -1,19 +1,19 @@
-uuid: cd4400f7-7921-4eae-81d5-be18fb254394
+uuid: 9e024e6f-2c4a-4876-8286-e519b38ff480
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.category
-    - node.type.quiz
+    - node.type.collection
     - taxonomy.vocabulary.category
-id: node.quiz.category
+id: node.collection.category
 field_name: category
 entity_type: node
-bundle: quiz
+bundle: collection
 label: Category
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

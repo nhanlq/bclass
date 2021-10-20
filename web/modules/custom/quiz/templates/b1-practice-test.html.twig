@@ -1,0 +1,25 @@
+{% if terms %}
+    <div class="b1-practice-test">
+        {% for term in terms %}
+            <div class="b1-test-item">
+                {% if term.parent.media is not empty %}
+                    <figure class="media-icon">
+                        <img src="{{ term.parent.media.entity.field_media_image.entity.uri.value | image_style('collection') }}"/>
+                    </figure>
+                    <div class="mock-test-child">
+                        <h3>{{ term.parent.name.value }}</h3>
+                        <ul class="list-test-month">
+                            {% for child in term.children %}
+                                <li>
+                                    <a href="{% if child.collection > 0 %}{{ path('entity.node.canonical', {'node': child.collection}) }}{% else %}#{% endif %}">{{ child.name }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+    <div class="clearfix"></div>
+
+{% endif %}

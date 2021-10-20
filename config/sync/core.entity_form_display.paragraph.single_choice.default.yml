@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.single_choice.answer
+    - field.field.paragraph.single_choice.answer_label
     - field.field.paragraph.single_choice.correct
     - paragraphs.paragraphs_type.single_choice
   module:
@@ -20,15 +21,21 @@ bundle: single_choice
 mode: default
 content:
   answer:
-    weight: 0
+    weight: 1
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
+  answer_label:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   correct:
-    weight: 1
+    weight: 2
     settings:
       display_label: true
     third_party_settings: {  }

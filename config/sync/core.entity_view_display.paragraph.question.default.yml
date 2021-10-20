@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.question.answers
+    - field.field.paragraph.question.number
     - field.field.paragraph.question.question
     - paragraphs.paragraphs_type.question
   module:
@@ -29,6 +30,15 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
+  number:
+    weight: 2
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
     region: content
   question:
     weight: 0

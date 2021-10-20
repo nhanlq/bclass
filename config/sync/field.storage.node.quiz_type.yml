@@ -1,0 +1,33 @@
+uuid: db302f17-a11e-4aa8-96a9-e65569329dbc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.quiz_type
+field_name: quiz_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Reading
+      label: Reading
+    -
+      value: Listening
+      label: Listening
+    -
+      value: Writing
+      label: Writing
+    -
+      value: Speaking
+      label: Speaking
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

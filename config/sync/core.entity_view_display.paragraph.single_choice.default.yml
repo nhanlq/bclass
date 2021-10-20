@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.single_choice.answer
+    - field.field.paragraph.single_choice.answer_label
     - field.field.paragraph.single_choice.correct
     - paragraphs.paragraphs_type.single_choice
   module:
     - field_layout
     - layout_discovery
+    - options
 third_party_settings:
   field_layout:
     id: layout_onecol
@@ -26,6 +28,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  answer_label:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   correct:
     weight: 1

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.section.audio
     - field.field.node.section.body
     - field.field.node.section.questions
     - field.field.node.section.quiz
@@ -37,6 +38,7 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  audio: true
   langcode: true
   questions: true
   quiz: true

@@ -16,7 +16,7 @@ provider: null
 plugin: 'system_menu_block:account'
 settings:
   id: 'system_menu_block:account'
-  label: 'My Profile'
+  label: 'Tài Khoản'
   provider: system
   label_display: visible
   level: 1

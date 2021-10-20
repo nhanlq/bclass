@@ -1,0 +1,21 @@
+uuid: 065cdc3d-f20a-4e0e-a8ca-ecd4720f660f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.answer_label
+    - paragraphs.paragraphs_type.single_choice
+  module:
+    - options
+id: paragraph.single_choice.answer_label
+field_name: answer_label
+entity_type: paragraph
+bundle: single_choice
+label: 'Thứ tự câu trả lời'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

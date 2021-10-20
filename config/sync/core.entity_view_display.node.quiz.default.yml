@@ -4,12 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.node.quiz.body
-    - field.field.node.quiz.category
+    - field.field.node.quiz.collection
     - field.field.node.quiz.media
+    - field.field.node.quiz.quiz_type
+    - field.field.node.quiz.total_score
     - node.type.quiz
   module:
     - field_layout
     - layout_discovery
+    - options
     - text
     - user
 third_party_settings:
@@ -29,8 +32,8 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  category:
-    weight: 102
+  collection:
+    weight: 105
     label: above
     settings:
       link: true
@@ -50,6 +53,24 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
+    region: content
+  quiz_type:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  total_score:
+    weight: 106
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
     region: content
 hidden:
   langcode: true

@@ -9,7 +9,7 @@ id: paragraph.single_choice.answer
 field_name: answer
 entity_type: paragraph
 bundle: single_choice
-label: Answer
+label: 'Câu trả lời'
 description: ''
 required: false
 translatable: false

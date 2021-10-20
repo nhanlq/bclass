@@ -1,0 +1,23 @@
+uuid: 001c8f3a-3cd7-4392-a93c-97ec40701e75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.number
+    - paragraphs.paragraphs_type.question
+id: paragraph.question.number
+field_name: number
+entity_type: paragraph
+bundle: question
+label: 'Số câu hỏi'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

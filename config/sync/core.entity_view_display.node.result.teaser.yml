@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.result.quiz
+    - field.field.node.result.result
     - field.field.node.result.total_score
     - field.field.node.result.user
     - node.type.result
@@ -30,5 +31,6 @@ content:
 hidden:
   langcode: true
   quiz: true
+  result: true
   total_score: true
   user: true

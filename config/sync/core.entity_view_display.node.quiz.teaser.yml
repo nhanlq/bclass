@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.quiz.collection
     - field.field.node.quiz.media
     - field.field.node.quiz.quiz_type
+    - field.field.node.quiz.time
     - field.field.node.quiz.total_score
     - node.type.quiz
   module:
@@ -43,4 +44,5 @@ hidden:
   langcode: true
   media: true
   quiz_type: true
+  time: true
   total_score: true

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.result.quiz
+    - field.field.node.result.result
     - field.field.node.result.total_score
     - field.field.node.result.user
     - node.type.result
@@ -33,6 +34,13 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  result:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   total_score:
     weight: 101

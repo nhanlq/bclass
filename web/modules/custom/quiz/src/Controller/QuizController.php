@@ -103,4 +103,12 @@ class QuizController extends ControllerBase {
     ];
   }
 
+  public function result($nid){
+    $node = Node::load($nid);
+    return [
+      '#theme' => ['b1_practice_test_result'],
+      '#node' => $node,
+    ];
+  }
+
 }

@@ -21,6 +21,22 @@ function quiz_theme($existing, $type, $theme, $path): array {
         ],
       ],
     ],
+    'b1_practice_test_result' => [
+      'variables' => [
+        'node' => NULL,
+        'cache' => [
+          'max-age' => 0,
+        ],
+      ],
+    ],
+    'question_number' => [
+      'variables' => [
+        'questions' => NULL,
+        'cache' => [
+          'max-age' => 0,
+        ],
+      ],
+    ],
   ];
 }
 

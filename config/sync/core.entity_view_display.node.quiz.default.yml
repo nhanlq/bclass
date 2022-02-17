@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.quiz.collection
     - field.field.node.quiz.media
     - field.field.node.quiz.quiz_type
+    - field.field.node.quiz.time
     - field.field.node.quiz.total_score
     - node.type.quiz
   module:
@@ -60,6 +61,17 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  time:
+    weight: 107
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
     region: content
   total_score:
     weight: 106

@@ -1,0 +1,7 @@
+quiz-action:
+  js:
+    js/quiz-action.js: {}
+  dependencies:
+    - core/drupal
+    - core/modernizr
+    - core/jquery.once

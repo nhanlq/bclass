@@ -1,0 +1,23 @@
+{% if questions %}
+    <div class="NumberListQuestion">
+        <div class="row">
+            <div class="timer"><div class="countdown"></div></div>
+            {% for key,section in questions %}
+                <div class="section-{{ key }} section-block-number">
+                    <span class="section-label-{{ key }}">Section {{ loop.index }}</span>
+                    {% for question in section %}
+                        {{ question.question|raw }}
+{#                        <ul>#}
+{#                            {% for key,answer in question.answers %}#}
+{#                                <li class="{{ key }}">{{ answer|raw }}</li>#}
+{#                            {% endfor %}#}
+{#                        </ul>#}
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+    <div class="clearfix"></div>
+{% endif %}

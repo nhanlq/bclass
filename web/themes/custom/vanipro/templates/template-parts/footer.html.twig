@@ -78,6 +78,9 @@
   {{ attach_library('vanipro/cookiealert-scripts') }}
   {% include '@vanipro/template-parts/cookie.html.twig' %}
 {% endif %}
+{% if page.static_block %}
+    {{ page.static_block }}
+{% endif %}
 <!-- End: Footer -->
 {% if font_icon_fontawesome %}
 {{ attach_library('vanipro/fontawesome') }}

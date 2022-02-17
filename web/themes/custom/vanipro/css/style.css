@@ -3643,8 +3643,90 @@ a.practice-item__btn-action {
 }
 .countdown{
   text-align: center;
-  margin-top: 40px;
   font-size: 30px;
   font-weight: bolder;
 }
+
+.section-block-number{
+  width: 100%;
+  clear: both;
+  margin-bottom: 10px;
+  padding: 10px 10px 10px 30px;
+}
+.NumberListQuestion{
+  margin: 0 auto;
+  background: var(--theme-color);
+  border-radius: 10px 10px;
+}
+.section-block-number span{
+  width: 100%;
+  clear: both;
+  margin-bottom: 10px;
+  display: block;
+}
+.section-block-number ul li{
+  list-style: none;
+  width: 30px;
+  background: var(--circle-three);
+  border-radius: 15px 15px;
+  height: 29px;
+  padding: 0px 0px 10px 9px;
+   display: inline-block;
+  margin-left: 5px;
+}
+.section-block-number ul{
+  display: inline-block;
+}
+.number-qt{
+  width: 30px;
+  display: inline-block;
+  text-align: center;
+  background: var(--circle-three);
+  border-radius: 15px 15px;
+}
+.number-of{
+  margin-bottom: 5px;
+}
+
+.number-qt.active{
+  background-color: var(--theme-color-two);
+}
+.NumberListQuestion.pos{
+  position: fixed;
+  top: 20%;
+}
+
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 767px;
+  }
+  .test-form-item audio{
+    width: 100%!important;
+  }
+  .practice-test-module .divTableCell{
+    width: 100%!important;
+    margin: 20px;
+  }
+  NumberListQuestion.pos {
+    position: fixed;
+    top: 7%!important;
+  }
+  .NumberListQuestion {
+    margin: 0 auto;
+    background: var(--theme-color);
+    border-radius: 10px 10px;
+    width: 35%!important;
+    right: 0!important;
+    opacity: 0.9;
+    /* height: 50%; */
+  }
+  .section-block-number {
+    width: 100%;
+    clear: both;
+    margin-bottom: 0!important;
+    padding: 5px 10px 10px 10px!important;
+  }
+}
+
 

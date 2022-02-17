@@ -32,4 +32,5 @@ regions:
   footer_third: 'Footer third'
   footer_fourth: 'Footer fourth'
   footer_bottom: 'Footer Bottom'
+  static_block: 'Static block'
   hidden_blocks: 'Hidden Blocks'

@@ -14,3 +14,10 @@ quiz.test:
   requirements:
     _permission: 'access content'
     
+b_practice_result:
+  path: /b1-practice-test/result/{nid}
+  defaults:
+    _title: 'Kết Quả'
+    _controller: '\Drupal\quiz\Controller\QuizController::result'
+  requirements:
+    _permission: 'access content'

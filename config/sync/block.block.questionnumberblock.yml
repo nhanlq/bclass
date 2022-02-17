@@ -1,0 +1,28 @@
+uuid: cf2621ad-fd6e-4c48-9260-1f62ea727f9b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - quiz
+  theme:
+    - vanipro
+id: questionnumberblock
+theme: vanipro
+region: sidebar_second
+weight: -8
+provider: null
+plugin: question_number
+settings:
+  id: question_number
+  label: 'Question Number Block'
+  provider: quiz
+  label_display: '0'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      quiz: quiz
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

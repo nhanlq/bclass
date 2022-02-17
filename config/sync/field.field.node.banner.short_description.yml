@@ -1,0 +1,19 @@
+uuid: 4fe179a8-72f5-482c-89c6-5342482df1b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.short_description
+    - node.type.banner
+id: node.banner.short_description
+field_name: short_description
+entity_type: node
+bundle: banner
+label: 'Short Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

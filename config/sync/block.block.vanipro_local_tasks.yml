@@ -1,0 +1,22 @@
+uuid: edd7f2a3-139f-4a8e-81a5-98e0b8ab805a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - vanipro
+_core:
+  default_config_hash: OKXDZl1Pawpz_yvawi-4ZXsfzZ_x6TWKpVa1_aVGJss
+id: vanipro_local_tasks
+theme: vanipro
+region: content
+weight: -7
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

@@ -1,0 +1,39 @@
+uuid: b6e8e91a-d1cb-4fd9-8562-c23b1ea1c4ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.category.media
+    - taxonomy.vocabulary.category
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: taxonomy_term.category.default
+targetEntityType: taxonomy_term
+bundle: category
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  media:
+    type: entity_reference_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

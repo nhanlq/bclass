@@ -1,0 +1,29 @@
+uuid: 21812a95-e43b-494e-a5e6-c4eb161b60d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.quiz
+    - node.type.quiz
+    - node.type.result
+id: node.result.quiz
+field_name: quiz
+entity_type: node
+bundle: result
+label: Quiz
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      quiz: quiz
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

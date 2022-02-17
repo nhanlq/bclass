@@ -1,0 +1,10 @@
+uuid: 1683be59-6c2c-4247-8eb2-94d3be248f45
+langcode: en
+status: true
+dependencies: {  }
+id: multiple_choice
+label: 'Multiple Choice'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,126 @@
+/* Main -> Admin Tabs */
+ul.page-tabs {
+  margin: 0 0 0.6em 0;
+  padding: 0 0 1px 0;
+  border-bottom: 1px solid var(--border-color);
+  list-style: none;
+}
+.page-tabs li {
+  display: inline-block;
+  padding: 0;
+}
+.page-tabs li a {
+  padding: 4px 10px;
+  background: var(--border-color);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.page-tabs li.active-page-tab a,
+.page-tabs li a:hover {
+  color: #fff;
+  background: var(--theme-color);
+}
+/* Drupal system message */
+.message,
+.message-success,
+.message-info,
+.message-error,
+.message-warning,
+.message-announcement,
+.message-notice {
+  position: relative;
+  margin: 1em 0;
+  padding: 14px 14px 14px 64px;
+  color: #ffffff;
+  text-shadow: none;
+}
+.message p:last-child,
+.message-success p:last-child,
+.message-info p:last-child,
+.message-error p:last-child,
+.message-warning p:last-child,
+.message-announcement p:last-child,
+.message-notice p:last-child {
+  margin: 0;
+}
+.message a,
+.message a:visited,
+.message-success a,
+.message-info a,
+.message-error a,
+.message-warning a,
+.message-announcement a,
+.message-notice a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.message em,
+.message-success em,
+.message-info em,
+.message-error em,
+.message-warning em,
+.message-announcement em,
+.message-notice em {
+  color: var(--bold-color);
+}
+.message-status,
+.message-success {
+  background: #89ad32;
+}
+.message-status::before,
+.message-success::before {
+  content: "\e90d";
+  background-color: #759625;
+}
+.message-info {
+  background-color: #0c79c2;
+}
+.message-info::before {
+  content: "\e919";
+  background-color: #0865a3;
+}
+.message-error {
+  background: #c94d1c;
+}
+.message-error::before {
+  content: "\e90e";
+  background-color: #b3461b;
+}
+.message-warning {
+  background: #cd5a0a;
+}
+.message-warning::before {
+  content: "\e90f";
+  background-color: #a44707;
+}
+.message-announcement {
+  background-color: #09bdab;
+}
+.message-announcement::before {
+  content: "\e917";
+  background-color: #0d9e88;
+}
+.message-notice {
+  background-color: #cca610;
+}
+.message-notice::before {
+  background-color: #bd8a09;
+  content: "\e918";
+}
+.message::before,
+.message-success::before,
+.message-info::before,
+.message-error::before,
+.message-warning::before,
+.message-announcement::before,
+.message-notice::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 53px;
+  height: 100%;
+  font-family: "vani";
+  font-size: 2em;
+  line-height: 53px;
+  text-align: center;
+}

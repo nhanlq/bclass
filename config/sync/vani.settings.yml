@@ -1,0 +1,27 @@
+all_icons_show: 1
+facebook_url: 'https://www.facebook.com/idewdot'
+twitter_url: 'https://twitter.com/dewdots'
+instagram_url: 'https://www.instagram.com/google'
+linkedin_url: 'https://in.linkedin.com/company/google'
+youtube_url: 'https://www.youtube.com/user/Google'
+vimeo_url: 'https://vimeo.com/'
+telegram_url: 'https://telegram.org/'
+whatsapp_url: 'https://web.whatsapp.com/'
+github_url: 'https://github.com/'
+vk_url: ''
+slider_show: 1
+slider_code: ''
+slider_image: ''
+slider_image_path: ''
+front_sidebar: 0
+comment_user_pic: 1
+node_author_pic: 0
+node_tags: 0
+font_icon_fontawesome: 0
+font_icon_material: 0
+copyright_text: 1
+scrolltotop_on: 1
+styling: 0
+styling_code: ''
+_core:
+  default_config_hash: S0NyT1Vk-XqW9Wd-H6zu491WbVDxplBrm0kbiBEFfIs

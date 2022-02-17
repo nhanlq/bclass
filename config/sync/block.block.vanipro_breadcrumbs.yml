@@ -1,0 +1,22 @@
+uuid: 56ef4460-d0d4-4a94-8a97-886857203379
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vanipro
+_core:
+  default_config_hash: gZHiK7-lLZZDXcLxoGJCWEf1SpgYYXXZydgenEq3oBg
+id: vanipro_breadcrumbs
+theme: vanipro
+region: page_header
+weight: -5
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

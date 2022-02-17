@@ -1,0 +1,23 @@
+uuid: f3133a97-d1a9-440c-8ca4-b85101d49a16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.time
+    - node.type.quiz
+id: node.quiz.time
+field_name: time
+entity_type: node
+bundle: quiz
+label: "\bThời gian làm bài"
+description: "Listening: 45'\r\nReading, Writing: 60'"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

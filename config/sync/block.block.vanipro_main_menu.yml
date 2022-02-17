@@ -1,0 +1,27 @@
+uuid: 2de3b118-b92f-49ff-888c-8173bf603374
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - vanipro
+_core:
+  default_config_hash: LwoWHOSpE4CWdDUvk52h6STjffuVYa5eZnJU00rzhxU
+id: vanipro_main_menu
+theme: vanipro
+region: primary_menu
+weight: -7
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 5
+  expand_all_items: false
+visibility: {  }

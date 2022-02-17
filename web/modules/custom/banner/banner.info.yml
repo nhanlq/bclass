@@ -1,0 +1,5 @@
+name: 'Banner'
+type: module
+description: 'Banner Slider Homepage'
+package: 'BOT'
+core_version_requirement: ^8.8 || ^9

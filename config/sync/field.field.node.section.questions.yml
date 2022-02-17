@@ -1,0 +1,37 @@
+uuid: f6762c2e-d325-43c0-9a9c-43172f492c73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.questions
+    - node.type.section
+    - paragraphs.paragraphs_type.question
+  module:
+    - entity_reference_revisions
+id: node.section.questions
+field_name: questions
+entity_type: node
+bundle: section
+label: Questions
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      question: question
+    target_bundles_drag_drop:
+      multiple_choice:
+        weight: 4
+        enabled: false
+      question:
+        enabled: true
+        weight: 5
+      single_choice:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

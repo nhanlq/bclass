@@ -1,0 +1,19 @@
+uuid: 99951893-565e-41be-9d25-896b02cc3d1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.subtitle
+    - node.type.banner
+id: node.banner.subtitle
+field_name: subtitle
+entity_type: node
+bundle: banner
+label: Subtitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,51 @@
+.sidebar .block {
+  padding: 20px;
+  background: var(--content-bg);
+  margin-bottom: 2em;
+  border-radius: 6px;
+}
+.sidebar .block-title {
+  line-height: 1;
+  padding-bottom: 0.3em;
+}
+.sidebar-circle-one,
+.sidebar-circle-two {
+  position: absolute;
+  border-radius: 50%;
+}
+.sidebar-circle-one {
+  background: var(--circle-one);
+  width: 30px;
+  height: 30px;
+  top: 38px;
+  right: 20px;
+}
+.sidebar-circle-two {
+  background: var(--circle-two);
+  width: 42px;
+  height: 42px;
+  top: 20px;
+  right: 36px;
+}
+.sidebar ul,
+.sidebar ol {
+  margin: 0;
+  padding: 0;
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar li {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--content-border-color);
+}
+/* Forms in sidebar */
+.sidebar input[type="text"],
+.sidebar input[type="email"],
+.sidebar input[type="url"],
+.sidebar input[type="password"],
+.sidebar input[type="search"],
+textarea {
+  width: 100%;
+  border: 1px solid var(--content-border-color);
+}

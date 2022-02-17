@@ -1,0 +1,19 @@
+uuid: 0c2557b5-6833-4647-a9af-5f0ad7385570
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.result
+    - node.type.result
+id: node.result.result
+field_name: result
+entity_type: node
+bundle: result
+label: Result
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

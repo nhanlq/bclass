@@ -1,0 +1,3 @@
+services:
+  quiz.quiz_services:
+    class: Drupal\quiz\QuizService

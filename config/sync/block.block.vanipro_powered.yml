@@ -1,0 +1,22 @@
+uuid: 989015b3-6e81-4667-9d0b-4765a4f7945e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vanipro
+_core:
+  default_config_hash: x2FqnBe_rYLNKarUPuNcgPurAT-2cK9aPLfOrN2Q8nc
+id: vanipro_powered
+theme: vanipro
+region: hidden_blocks
+weight: -4
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

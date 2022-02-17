@@ -1,0 +1,27 @@
+uuid: d4d615ac-e5d1-4dee-aaa9-ee4923916b0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - vani
+_core:
+  default_config_hash: VCwNgU_2WIDFyUHQt6nkaWiVnyHG6XAPXvm7FllVUZ0
+id: vani_main_menu
+theme: vani
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 5
+  expand_all_items: false
+visibility: {  }

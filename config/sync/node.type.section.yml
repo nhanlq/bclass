@@ -1,0 +1,17 @@
+uuid: 8606113b-a422-46ed-8fef-47536f394256
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Section
+type: section
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,29 @@
+uuid: f497b8dd-e511-4c38-8cc9-a607ce5cc164
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.media
+    - media.type.image
+    - taxonomy.vocabulary.category
+id: taxonomy_term.category.media
+field_name: media
+entity_type: taxonomy_term
+bundle: category
+label: Media
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

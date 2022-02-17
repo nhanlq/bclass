@@ -1,0 +1,27 @@
+uuid: 9b9ee5e7-dcfb-47ad-a29f-3d8ccd909b5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - vani
+_core:
+  default_config_hash: H6dFO9ZEb5ZG3KwDYHNTM68B9zbiHVvzMtDnxVKakgc
+id: vani_tools
+theme: vani
+region: hidden_blocks
+weight: -6
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

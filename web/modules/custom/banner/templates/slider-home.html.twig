@@ -1,0 +1,15 @@
+{% if nodes %}
+ {% for node in nodes %}
+   <div class="slider-item">
+     <div class="slider-text">
+       <h3 class="layer1">{{ node.title.value }}</h3>
+       <h1 class="layer2">{{ node.subtitle.value }}</h1>
+       <p class="layer3">{{ node.short_description.value }}</p>
+       <div class="layer4"><a class="button-link" href="{{ node.link[0]['#url'] }}">read more</a></div>
+     </div><!-- /.slider-text -->
+     <div class="slider-img">
+       <img src="{{ file_url(node.field_image.entity.uri.value) }}" alt="slider" />
+     </div><!-- /.slider-img {% if loop.index == 1 %}one {% elseif loop.index == 2 %}two{% elseif loop.index == 3 %}three{% else %}four{% endif %} -->
+   </div><!-- /.slider-item {% if loop.index == 1 %}one {% elseif loop.index == 2 %}two{% elseif loop.index == 3 %}three{% else %}four{% endif %} -->
+  {% endfor %}
+{% endif %}

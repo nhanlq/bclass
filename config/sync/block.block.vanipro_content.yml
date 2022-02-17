@@ -1,0 +1,22 @@
+uuid: f17eea67-9fc0-49d7-8f08-8e11abbc956a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vanipro
+_core:
+  default_config_hash: XkCy8MV-oF8JBUcbAo1BI9dMim4rIf3kVN_JK4UAADQ
+id: vanipro_content
+theme: vanipro
+region: content
+weight: -4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

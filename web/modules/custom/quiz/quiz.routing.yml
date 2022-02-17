@@ -1,0 +1,23 @@
+b_practice_test.controller:
+  path: /b1-practice-test
+  defaults:
+    _title: 'Thi thử B1'
+    _controller: '\Drupal\quiz\Controller\QuizController::index'
+  requirements:
+    _access: 'TRUE'
+
+quiz.test:
+  path: /practice/test/{nid}
+  defaults:
+    _controller: '\Drupal\quiz\Controller\QuizController::practice_test'
+    _title_callback: '\Drupal\quiz\Controller\QuizController::testTitle'
+  requirements:
+    _permission: 'access content'
+    
+b_practice_result:
+  path: /b1-practice-test/result/{nid}
+  defaults:
+    _title: 'Kết Quả'
+    _controller: '\Drupal\quiz\Controller\QuizController::result'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,5 @@
+name: 'Quizzes'
+type: module
+description: 'Quiz Management BOT'
+package: 'BOT'
+core_version_requirement: ^8.8 || ^9

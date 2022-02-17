@@ -1,0 +1,57 @@
+uuid: c25c2f3a-4f52-449e-a080-79f351b2484a
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.answer_label
+field_name: answer_label
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: A
+      label: A
+    -
+      value: B
+      label: B
+    -
+      value: C
+      label: C
+    -
+      value: D
+      label: D
+    -
+      value: E
+      label: E
+    -
+      value: F
+      label: F
+    -
+      value: '1'
+      label: '1'
+    -
+      value: '2'
+      label: '2'
+    -
+      value: '3'
+      label: '3'
+    -
+      value: '4'
+      label: '4'
+    -
+      value: '5'
+      label: '5'
+    -
+      value: '6'
+      label: '6'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

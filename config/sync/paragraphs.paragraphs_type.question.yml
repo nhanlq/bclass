@@ -1,0 +1,10 @@
+uuid: 88c10be0-e8a3-499f-bb5a-eb4b1ed40ff4
+langcode: en
+status: true
+dependencies: {  }
+id: question
+label: 'Câu hỏi'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

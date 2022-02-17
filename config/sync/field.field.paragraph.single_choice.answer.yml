@@ -1,0 +1,19 @@
+uuid: 3ea82b46-567a-421d-89f1-dfc4083bb220
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.answer
+    - paragraphs.paragraphs_type.single_choice
+id: paragraph.single_choice.answer
+field_name: answer
+entity_type: paragraph
+bundle: single_choice
+label: 'Câu trả lời'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

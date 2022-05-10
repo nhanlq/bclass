@@ -16,10 +16,10 @@ plugin: banner_home
 settings:
   id: banner_home
   label: 'Banner Home Slider'
-  provider: banner
   label_display: '0'
+  provider: banner
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
+    pages: '<front>'

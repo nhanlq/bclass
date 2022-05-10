@@ -25,24 +25,24 @@ bundle: page
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
     weight: 100
     region: content
+  links:
     settings: {  }
     third_party_settings: {  }
-  links:
     weight: 101
     region: content
-    settings: {  }
-    third_party_settings: {  }
   webform:
-    weight: 102
+    type: webform_entity_reference_entity_view
     label: hidden
     settings:
       source_entity: true
     third_party_settings: {  }
-    type: webform_entity_reference_entity_view
+    weight: 102
     region: content
 hidden:
   langcode: true

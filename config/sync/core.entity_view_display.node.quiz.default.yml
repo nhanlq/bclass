@@ -27,43 +27,43 @@ bundle: quiz
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 101
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 101
     region: content
   collection:
-    weight: 105
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 105
     region: content
   links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
   media:
     type: entity_reference_entity_view
-    weight: 103
     label: above
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 103
     region: content
   quiz_type:
-    weight: 104
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 104
     region: content
   time:
-    weight: 107
+    type: number_decimal
     label: above
     settings:
       thousand_separator: ''
@@ -71,10 +71,10 @@ content:
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_decimal
+    weight: 107
     region: content
   total_score:
-    weight: 106
+    type: number_decimal
     label: above
     settings:
       thousand_separator: ''
@@ -82,7 +82,7 @@ content:
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_decimal
+    weight: 106
     region: content
 hidden:
   langcode: true

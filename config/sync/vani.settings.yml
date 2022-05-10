@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: S0NyT1Vk-XqW9Wd-H6zu491WbVDxplBrm0kbiBEFfIs
 all_icons_show: 1
 facebook_url: 'https://www.facebook.com/idewdot'
 twitter_url: 'https://twitter.com/dewdots'
@@ -23,5 +25,3 @@ copyright_text: 1
 scrolltotop_on: 1
 styling: 0
 styling_code: ''
-_core:
-  default_config_hash: S0NyT1Vk-XqW9Wd-H6zu491WbVDxplBrm0kbiBEFfIs

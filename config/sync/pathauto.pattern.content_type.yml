@@ -12,6 +12,10 @@ pattern: '[node:title]'
 selection_criteria:
   b39682d9-8122-4ace-bf50-130036dffc95:
     id: 'entity_bundle:node'
+    negate: false
+    uuid: b39682d9-8122-4ace-bf50-130036dffc95
+    context_mapping:
+      node: node
     bundles:
       article: article
       banner: banner
@@ -21,10 +25,6 @@ selection_criteria:
       result: result
       section: section
       webform: webform
-    negate: false
-    context_mapping:
-      node: node
-    uuid: b39682d9-8122-4ace-bf50-130036dffc95
 selection_logic: and
 weight: -5
 relationships: {  }

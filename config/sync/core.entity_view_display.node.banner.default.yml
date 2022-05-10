@@ -25,16 +25,16 @@ bundle: banner
 mode: default
 content:
   field_image:
-    weight: 104
+    type: image
     label: above
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
     third_party_settings: {  }
-    type: image
+    weight: 104
     region: content
   link:
-    weight: 103
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -43,27 +43,27 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 103
     region: content
   links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
   short_description:
-    weight: 102
+    type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 102
     region: content
   subtitle:
-    weight: 101
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 101
     region: content
 hidden:
   langcode: true

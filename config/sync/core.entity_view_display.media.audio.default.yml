@@ -23,14 +23,14 @@ mode: default
 content:
   field_media_audio_file:
     type: file_audio
-    weight: 0
     label: hidden
     settings:
       controls: true
+      autoplay: false
       loop: true
       multiple_file_display_type: tags
-      autoplay: false
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   created: true

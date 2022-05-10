@@ -16,13 +16,13 @@ plugin: question_number
 settings:
   id: question_number
   label: 'Question Number Block'
-  provider: quiz
   label_display: '0'
+  provider: quiz
 visibility:
-  node_type:
-    id: node_type
-    bundles:
-      quiz: quiz
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
+    bundles:
+      quiz: quiz

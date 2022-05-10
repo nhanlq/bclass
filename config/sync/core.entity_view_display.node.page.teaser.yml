@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
+    - field.field.node.page.webform
     - node.type.page
   module:
     - field_layout
@@ -36,3 +37,4 @@ content:
     region: content
 hidden:
   langcode: true
+  webform: true

@@ -29,6 +29,9 @@
             //minutes = (minutes < 10) ?  minutes : minutes;
             jQuery('.countdown').html(minutes + ':' + seconds);
             timer2 = minutes + ':' + seconds;
+            if(minutes == 0 && seconds == 0){
+                $("#practice-test-form").submit();
+            }
         }, 1000);
 
 
@@ -38,6 +41,18 @@
             }else if($(window).scrollTop() < 50){
                 $(".NumberListQuestion").removeClass("pos");
             }
+        });
+
+        $('.section-block-number .number-qt').each(function() {
+
+            $(this).click(function() {
+                var id = $(this).attr('data-pid');
+                console.log($('#edit-question-' + id + '--wrapper'));
+                $('html, body').animate({
+                    scrollTop: eval($('#edit-question-' + id + '--wrapper').offset().top - 200)
+                }, 1000);
+            });
+
         });
     }
   };

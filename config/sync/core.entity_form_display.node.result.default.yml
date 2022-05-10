@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.result.collection
     - field.field.node.result.quiz
+    - field.field.node.result.quiz_type
     - field.field.node.result.result
     - field.field.node.result.total_score
     - field.field.node.result.user
@@ -22,6 +24,16 @@ targetEntityType: node
 bundle: result
 mode: default
 content:
+  collection:
+    weight: 125
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   created:
     type: datetime_timestamp
     weight: 10
@@ -57,6 +69,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  quiz_type:
+    weight: 126
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   result:
     weight: 124

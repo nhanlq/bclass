@@ -93,56 +93,5 @@
                 </p></div>
         </div>
     </div>
-    <div class="practice-test-module">
-        <div class="divTableCell first-col">Thi Thử</div>
-        <div class="divTableCell practice-item -aqua -not-start">
-            <div class="practice-item__chart">
-                <div class="practice-item__chart-icon"><i class="fas fa-book-open"></i></div>
-                <div class="practice-item__chart-title">{{ 'Phần Đọc'|trans }}</div>
-            </div>
-            <div class="practice-item__btn">
-                <a class="practice-item__btn-action "
-                   href="
-                   {% if test_links and test_links.reading %}
-{{ path('entity.node.canonical', {'node': test_links.reading}) }}
-{% else %}# {% endif %}"
-                >{{ 'Vào Thi'|trans }}</a>
-
-            </div>
-        </div>
-        <div class="divTableCell practice-item -green -not-start">
-            <div class="practice-item__chart">
-
-                <div class="practice-item__chart-icon"><i class="fas fa-headphones"></i></div>
-                <div class="practice-item__chart-title"> {{ 'Phần Nghe'|trans }}</div>
-            </div>
-            <div class="practice-item__btn">
-                <a class="practice-item__btn-action "
-                   href="
-                    {% if test_links and test_links.listening %}
-                    {{ path('entity.node.canonical', {'node': test_links.listening}) }}
-                                               {% else %}# {% endif %}">{{ 'Vào Thi'|trans }}</a>
-            </div>
-        </div>
-        <div class="divTableCell practice-item -orange -not-start">
-            <div class="practice-item__chart">
-                <div class="practice-item__chart-icon"><i class="fas fa-pencil-alt"></i></div>
-                <div class="practice-item__chart-title">{{ 'Phần Viết'|trans }}</div>
-            </div>
-            <div class="practice-item__btn"><a class="practice-item__btn-action "
-                                               href="{% if test_links and test_links.writing %}
-                    {{ path('entity.node.canonical', {'node': test_links.writing}) }}
-                                               {% else %}# {% endif %}">{{ 'Vào Thi'|trans }}</a>
-            </div>
-        </div>
-        <div class="divTableCell practice-item -pink -not-start">
-            <div class="practice-item__chart">
-                <div class="practice-item__chart-icon"><i class="fas fa-microphone"></i></div>
-                <div class="practice-item__chart-title"> {{ 'Phần Nói'|trans }}</div>
-            </div>
-            <div class="practice-item__btn"><a title="Hệ thống đang trong quá trình phát triển" class="practice-item__btn-action js-check-ios"
-                                               href="#">{{ 'Vào Thi'|trans }}</a>
-            </div>
-        </div>
-    </div>
+    <div class="back__btn-action"><a href="{{ url }}"/>Vào Thi</div>
 </article>

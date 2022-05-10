@@ -4,12 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.webform
     - node.type.page
   module:
     - field_layout
     - layout_discovery
     - path
     - text
+    - webform
 third_party_settings:
   field_layout:
     id: layout_onecol
@@ -90,4 +92,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  webform:
+    weight: 121
+    settings:
+      default_data: true
+      webforms: {  }
+    third_party_settings: {  }
+    type: webform_entity_reference_select
+    region: content
 hidden: {  }

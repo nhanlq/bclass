@@ -3683,6 +3683,7 @@ a.practice-item__btn-action {
   text-align: center;
   background: var(--circle-three);
   border-radius: 15px 15px;
+  cursor: pointer;
 }
 .number-of{
   margin-bottom: 5px;
@@ -3694,6 +3695,67 @@ a.practice-item__btn-action {
 .NumberListQuestion.pos{
   position: fixed;
   top: 20%;
+  width: 20%;
+}
+.section-result h4{
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+ul.result-list li{
+  list-style: none;
+}
+.result-icon{
+  margin-left: 10px;
+  font-size: 18px;
+}
+.right.result-icon{
+  color: #00875f;
+}
+.wrong.result-icon{
+  color: #f79999;
+}
+.total-score{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.4em;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+.label-score span{
+  color: #f79999;
+}
+.action-back-button{
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  margin-top: 60px;
+}
+.re-test__btn-action{
+  background-color: #ff6347;
+  padding: 10px 10px;
+  border-radius: 10px;
+  color: var(--text-color);
+}
+.back__btn-action {
+  background-color: #32cea4;
+  padding: 10px 10px;
+  border-radius: 10px;
+  color: var(--text-color);
+  margin-right: 20px;
+}
+.node-view-mode-teaser .back__btn-action a{
+  color: #333333;
+}
+.node-view-mode-teaser .back__btn-action{
+  text-align: center;
+  margin-right: 0;
+}
+.node-view-mode-teaser .book-img-wrap{
+  float: none;
+  margin: 0;
+}
+.node-view-mode-teaser{
+  text-align: center;
 }
 
 

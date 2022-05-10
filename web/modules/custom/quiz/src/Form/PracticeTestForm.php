@@ -108,11 +108,15 @@ class PracticeTestForm extends FormBase {
       'title' => 'Result of '.$user->id().' quiz '.$form_state->getValue('quiz'),
       'quiz' => ['target_id'=>$form_state->getValue('quiz')],
       'user' => ['target_id' => $user->id()],
+      'collection' => ['target_id' => $form_state->getValue('collection')],
+      'quiz_type' => $form_state->getValue('quiz_type'),
       'result' => json_encode($form_state->getValues())
     ]);
     $node->save();
     \Drupal::messenger()
       ->addMessage('Nộp bài thành công.');
+      $response = new \Symfony\Component\HttpFoundation\RedirectResponse('/b1-practice-test/result/'.$node->id()); //set url
+      $response->send();
 
   }
 

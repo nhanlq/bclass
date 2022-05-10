@@ -17,7 +17,7 @@ quiz.test:
 b_practice_result:
   path: /b1-practice-test/result/{nid}
   defaults:
-    _title: 'Kết Quả'
     _controller: '\Drupal\quiz\Controller\QuizController::result'
+    _title_callback: '\Drupal\quiz\Controller\QuizController::resultTitle'
   requirements:
     _permission: 'access content'

@@ -1,6 +1,6 @@
 sticky_header_option: 1
 header_circle: 1
-all_icons_show: 1
+all_icons_show: 0
 facebook_url: 'https://www.facebook.com/idewdot'
 twitter_url: 'https://twitter.com/dewdots'
 instagram_url: 'https://www.instagram.com/google'
@@ -14,10 +14,10 @@ vk_url: ''
 social_new_icon_code: ''
 page_share_all: 1
 page_share_page: 1
-page_share_article: 1
-page_share_book: 1
-page_share_other: 1
-page_share_front: 1
+page_share_article: 0
+page_share_book: 0
+page_share_other: 0
+page_share_front: 0
 slider_show: 1
 slider_circle: 1
 slider_time: '10000'

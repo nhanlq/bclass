@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.result.collection
     - field.field.node.result.quiz
+    - field.field.node.result.quiz_type
     - field.field.node.result.result
     - field.field.node.result.total_score
     - field.field.node.result.user
@@ -11,6 +13,7 @@ dependencies:
   module:
     - field_layout
     - layout_discovery
+    - options
     - user
 third_party_settings:
   field_layout:
@@ -22,6 +25,14 @@ targetEntityType: node
 bundle: result
 mode: default
 content:
+  collection:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   links:
     weight: 100
     settings: {  }
@@ -34,6 +45,13 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  quiz_type:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   result:
     weight: 104

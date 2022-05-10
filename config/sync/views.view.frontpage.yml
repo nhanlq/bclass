@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.rss
     - core.entity_view_mode.node.teaser
+    - node.type.collection
   module:
     - node
     - user
@@ -126,16 +127,16 @@ display:
           plugin_id: boolean
           entity_type: node
           entity_field: status
-        langcode:
-          id: langcode
+        type:
+          id: type
           table: node_field_data
-          field: langcode
+          field: type
           relationship: none
           group_type: group
           admin_label: ''
           operator: in
           value:
-            '***LANGUAGE_language_content***': '***LANGUAGE_language_content***'
+            collection: collection
           group: 1
           exposed: false
           expose:
@@ -144,6 +145,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -151,8 +154,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -165,9 +166,9 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: language
           entity_type: node
-          entity_field: langcode
+          entity_field: type
+          plugin_id: bundle
       pager:
         type: full
         options:
@@ -232,12 +233,16 @@ display:
           entity_type: node
           entity_field: created
       style:
-        type: default
+        type: grid
         options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
           uses_fields: false
+          columns: 4
+          automatic_width: true
+          alignment: horizontal
+          col_class_default: true
+          col_class_custom: ''
+          row_class_default: true
+          row_class_custom: ''
       title: ''
       header: {  }
       footer: {  }
@@ -285,6 +290,7 @@ display:
           relationship: none
           view_mode: rss
       display_extenders: {  }
+      enabled: false
     cache_metadata:
       contexts:
         - 'languages:language_interface'

@@ -4,6 +4,7 @@ namespace Drupal\quiz\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\node\Entity\Node;
+use Drupal\paragraphs\Entity\Paragraph;
 
 /**
  * Contains the callback handler used by the quiz Module.
@@ -105,10 +106,71 @@ class QuizController extends ControllerBase {
 
   public function result($nid){
     $node = Node::load($nid);
+    $result = $this->GetResult($node);
+    $answers = [];
+    $right = 0;
+    $count = 0;
+    $score = 0;
+    $quiz = Node::load($node->get('quiz')->target_id);
+    $collection = Node::load($node->get('collection')->target_id);
+    foreach($result as $key => $r){
+      $question = null;
+      $ans = null;
+      if(strpos($key,"question_") !== false){
+
+        $question = Paragraph::load(str_replace('question_','',$key));
+        if($r){
+          $ans = Paragraph::load($r);
+        }
+
+        if($ans && $ans->get('correct')->value == 1){
+          $right += 1;
+        }
+        $answers[] = ['question' => $question,'answer' => $ans];
+        $count += 1;
+      }
+    }
+    $evag = $quiz->get('total_score')->value / $count;
+    $score = $evag * $right;
+
+
+
     return [
       '#theme' => ['b1_practice_test_result'],
       '#node' => $node,
+      '#quiz' => $quiz,
+      '#collection' => $collection,
+      '#results' => $answers,
+      '#sections' => $this->getSectionByQuiz($node->get('quiz')->target_id),
+      '#score' => $score,
     ];
+  }
+
+  public function GetResult($node){
+    $result = json_decode($node->get('result')->value);
+    return $result;
+  }
+
+  /**
+   * @return array
+   */
+  public function resultTitle($nid): array {
+    $node = Node::load($nid);
+    $quiz = Node::load($node->get('quiz')->target_id);
+    return [
+      '#markup' => $quiz->getTitle(),
+      '#allowed_tags' => \Drupal\Component\Utility\Xss::getHtmlTagList(),
+    ];
+  }
+
+  public function getSectionByQuiz($qid){
+      $ids = \Drupal::entityQuery('node')
+        ->condition('status', 1)
+        ->condition('type','section')
+        ->condition('quiz', $qid)
+        ->execute();
+      $result = Node::loadMultiple($ids);
+      return $result;
   }
 
 }

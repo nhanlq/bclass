@@ -14,9 +14,9 @@ palette:
   circleone: '#68C2E8'
   circletwo: '#90D979'
   circlethree: '#F79999'
-logo: 'public://color/vanipro-908a4407/logo.svg'
+logo: 'public://color/vanipro-f3c9f068/logo.svg'
 stylesheets:
-  - 'public://color/vanipro-908a4407/colors.css'
+  - 'public://color/vanipro-f3c9f068/colors.css'
 files:
-  - 'public://color/vanipro-908a4407/logo.svg'
-  - 'public://color/vanipro-908a4407/colors.css'
+  - 'public://color/vanipro-f3c9f068/logo.svg'
+  - 'public://color/vanipro-f3c9f068/colors.css'

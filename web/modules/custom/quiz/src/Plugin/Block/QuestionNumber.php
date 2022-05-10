@@ -28,39 +28,42 @@ class QuestionNumber extends BlockBase {
    * Returns the Social Login Block.
    */
   public function build() {
-   return[
-     '#theme' =>['question_number'],
-     '#questions' =>$this->getNumberList(),
-     '#attached' => [
-       'library' => ['quiz/quiz-action']
-     ]
-   ];
+    return [
+      '#theme' => ['question_number'],
+      '#questions' => $this->getNumberList(),
+      '#attached' => [
+        'library' => ['quiz/quiz-action'],
+      ],
+    ];
   }
 
-  public function getNumberList(){
+  public function getNumberList() {
     $data = [];
     $node = \Drupal::routeMatch()->getParameter('node');
+
     if ($node instanceof NodeInterface) {
-      $service = \Drupal::service('quiz.quiz_services');
-      $sections = $service->getSection($node->id());
-      $i =1;
-      foreach($sections as $section){
-        $data [$section->id()] = [];
-        $node = Node::load($section->id());
-        $questions = $node->get('questions')->getValue();
-        foreach ($questions as $q) {
-          $answers = [];
-          $paragraph = Paragraph::load($q['target_id']);
-          foreach ($paragraph->get('answers')->getValue() as $ans) {
-            $para_ans = Paragraph::load($ans['target_id']);
-            $answers[$ans['target_id']] = '<span class="label-'.$ans['target_id'].'">'.$para_ans->get('answer_label')->value . '</span> ';
+      if ($node->get('quiz_type')->value == 'Reading' || $node->get('quiz_type')->value == 'Listening') {
+        $service = \Drupal::service('quiz.quiz_services');
+        $sections = $service->getSection($node->id());
+        $i = 1;
+        foreach ($sections as $section) {
+          $data [$section->id()] = [];
+          $node = Node::load($section->id());
+          $questions = $node->get('questions')->getValue();
+          foreach ($questions as $q) {
+            $answers = [];
+            $paragraph = Paragraph::load($q['target_id']);
+            foreach ($paragraph->get('answers')->getValue() as $ans) {
+              $para_ans = Paragraph::load($ans['target_id']);
+              $answers[$ans['target_id']] = '<span class="label-' . $ans['target_id'] . '">' . $para_ans->get('answer_label')->value . '</span> ';
+            }
+            $data [$section->id()][] = [
+              'question' => '<div data-pid="' . $q['target_id'] . '" class="number-qt q-number-' . $q['target_id'] . '">' . $paragraph->get('number')->value . '</div> ',
+              'answers' => $answers,
+            ];
           }
-          $data [$section->id()][] = [
-            'question' => '<div class="number-qt q-number-'.$q['target_id'].'">'.$paragraph->get('number')->value . '</div> ',
-            'answers' => $answers,
-          ];
+          $i++;
         }
-        $i ++;
       }
       return $data;
     }

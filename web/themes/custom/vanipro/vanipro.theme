@@ -4,6 +4,8 @@
  * Contains vanipro theme override and preprocess functions.
  */
 use Drupal\node\Entity\Node;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
 /**
  * Sanitise input urls.
  */
@@ -92,6 +94,11 @@ function vanipro_preprocess_node(array &$variables) {
 	$variables['node_tags'] = theme_get_setting('node_tags', 'vanipro');
 
   if ($variables['node']->getType() == 'quiz') {
+    $user = \Drupal::currentUser();
+    if($user->isAnonymous()){
+      $response = new RedirectResponse('/user/login?destination=/node/'.$variables['node']->id()); //set url
+      $response->send();
+    }
     //get Collection
     $variables['collection'] = Node::load($variables['node']->get('collection')->target_id);
     //Get form

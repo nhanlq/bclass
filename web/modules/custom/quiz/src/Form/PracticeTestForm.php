@@ -5,6 +5,7 @@ namespace Drupal\quiz\Form;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\node\Entity\Node;
+use \Symfony\Component\HttpFoundation\RedirectResponse;
 
 class PracticeTestForm extends FormBase {
 
@@ -115,7 +116,7 @@ class PracticeTestForm extends FormBase {
     $node->save();
     \Drupal::messenger()
       ->addMessage('Nộp bài thành công.');
-      $response = new \Symfony\Component\HttpFoundation\RedirectResponse('/b1-practice-test/result/'.$node->id()); //set url
+      $response = new RedirectResponse('/b1-practice-test/result/'.$node->id()); //set url
       $response->send();
 
   }

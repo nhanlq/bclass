@@ -1,0 +1,30 @@
+uuid: 92189413-a85d-42d8-ad56-d3c62fc24384
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - node
+id: content_type
+label: 'Content type'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  b39682d9-8122-4ace-bf50-130036dffc95:
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+      banner: banner
+      collection: collection
+      page: page
+      quiz: quiz
+      result: result
+      section: section
+      webform: webform
+    negate: false
+    context_mapping:
+      node: node
+    uuid: b39682d9-8122-4ace-bf50-130036dffc95
+selection_logic: and
+weight: -5
+relationships: {  }

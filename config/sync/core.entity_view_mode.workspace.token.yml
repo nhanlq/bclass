@@ -1,0 +1,10 @@
+uuid: 12161eea-955a-4931-9a35-5b8355974ee1
+langcode: en
+status: true
+dependencies:
+  module:
+    - workspaces
+id: workspace.token
+label: Token
+targetEntityType: workspace
+cache: true

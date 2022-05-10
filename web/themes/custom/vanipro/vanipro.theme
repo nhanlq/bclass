@@ -94,6 +94,7 @@ function vanipro_preprocess_node(array &$variables) {
 	$variables['node_tags'] = theme_get_setting('node_tags', 'vanipro');
 
   if ($variables['node']->getType() == 'quiz') {
+    $variables['#cache']['max-age'] = 0;
     $user = \Drupal::currentUser();
     if($user->isAnonymous()){
       $response = new RedirectResponse('/user/login?destination=/node/'.$variables['node']->id()); //set url
@@ -106,6 +107,7 @@ function vanipro_preprocess_node(array &$variables) {
     $variables['form_test'] = $form;
   }
   if($variables['node']->getType() == 'collection'){
+    $variables['#cache']['max-age'] = 0;
     $service = \Drupal::service('quiz.quiz_services');
     $variables['test_links'] = $service->getLinks($variables['node']->id());
   }

@@ -3816,6 +3816,12 @@ ul.result-list li {
     border: 2px solid var(--border-color);
     border-radius: 8px;
 }
+#block-views-block-tips-block-1 .node-view-mode-teaser{
+    margin-bottom: 1em;
+}
+.collection-home-page a img{
+    min-height: 220px;
+}
 
 
 .footer li {

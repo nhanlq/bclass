@@ -3808,6 +3808,18 @@ ul.result-list li {
 .node-view-mode-teaser {
     text-align: center;
 }
+.collection-home-page.views-col{
+    width: 24%!important;
+    margin-right: 10px;
+}
+
+
+.footer li {
+    border-bottom: 0px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
 
 
 @media (max-width: 576px) {
@@ -3856,6 +3868,10 @@ ul.result-list li {
         margin-top: 6px;
         width: 100%;
         margin-bottom: 20px;
+    }
+    .collection-home-page.views-col{
+        width: 100%!important;
+        margin-right: 0px;
     }
 }
 

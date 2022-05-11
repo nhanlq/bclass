@@ -17,26 +17,39 @@ id: contact
 title: Contact
 description: 'Basic email contact webform.'
 category: ''
-elements: |
+elements: |-
   name:
-    '#title': 'Your Name'
     '#type': textfield
+    '#title': 'Họ và Tên'
     '#required': true
+    '#required_error': 'Vui lòng nhập Họ và Tên'
     '#default_value': '[current-user:display-name]'
   email:
-    '#title': 'Your Email'
     '#type': email
+    '#title': Email
     '#required': true
+    '#required_error': 'Vui lòng nhập địa chỉ E-Mail'
     '#default_value': '[current-user:mail]'
-  subject:
-    '#title': Subject
-    '#type': textfield
+  phone:
+    '#type': tel
+    '#title': 'Điện Thoại'
     '#required': true
+    '#required_error': 'Vui lòng nhập số điện thoại'
+    '#international': true
+    '#international_initial_country': VN
+    '#international_preferred_countries':
+      - VN
+  subject:
+    '#type': textfield
+    '#title': 'Chủ Đề'
+    '#required': true
+    '#required_error': 'Vui lòng nhập Chủ Đề'
     '#test': 'Testing contact webform from [site:name]'
   message:
-    '#title': Message
     '#type': textarea
+    '#title': 'Nội Dung'
     '#required': true
+    '#required_error': 'Vui lòng nhập Nội Dung'
     '#test': 'Please ignore this email.'
   actions:
     '#type': webform_actions

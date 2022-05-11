@@ -1,0 +1,18 @@
+uuid: f4c57fd4-839a-49ad-9dc8-bf1e25eafbc7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.student
+field_name: student
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

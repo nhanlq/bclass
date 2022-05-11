@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.quiz.collection
     - field.field.node.quiz.media
     - field.field.node.quiz.quiz_type
+    - field.field.node.quiz.student
     - field.field.node.quiz.time
     - field.field.node.quiz.total_score
     - node.type.quiz
@@ -61,6 +62,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 104
+    region: content
+  student:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 108
     region: content
   time:
     type: number_decimal

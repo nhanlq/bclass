@@ -3,6 +3,8 @@
 /**
  * Implements hook_theme().
  */
+use \Drupal\Core\Form\FormStateInterface;
+
 function quiz_theme($existing, $type, $theme, $path): array {
   return [
     'quiz' => [
@@ -43,5 +45,19 @@ function quiz_theme($existing, $type, $theme, $path): array {
       ],
     ],
   ];
+}
+
+function quiz_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if($form_id == 'node_quiz_form'){
+    if(isset($_GET['collection'])){
+       $form['collection']['widget']["#default_value"] = $_GET['collection'];
+    }
+  }
+
+  if($form_id == 'node_section_form'){
+    if(isset($_GET['quiz'])){
+      $form['quiz']['widget']["#default_value"] = $_GET['quiz'];
+    }
+  }
 }
 

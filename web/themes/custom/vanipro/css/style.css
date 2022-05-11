@@ -3811,8 +3811,10 @@ ul.result-list li {
 .collection-home-page.views-col{
     width: 24%!important;
     margin-right: 10px;
-    border: 1px solid #999999;
-    border-radius: 7px;
+}
+#block-views-block-tips-block-1 .collection-home-page.views-col{
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
 }
 
 

@@ -3813,6 +3813,7 @@ ul.result-list li {
     margin-right: 10px;
     border: 1px solid #999999;
     border-radius: 7px;
+    max-height: 380px;
 }
 
 

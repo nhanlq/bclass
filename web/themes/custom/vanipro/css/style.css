@@ -3811,6 +3811,8 @@ ul.result-list li {
 .collection-home-page.views-col{
     width: 24%!important;
     margin-right: 10px;
+    border: 1px solid #999999;
+    border-radius: 7px;
 }
 
 
@@ -3820,6 +3822,9 @@ ul.result-list li {
     margin-right: 20px;
 }
 
+h2.node-title{
+    font-size: 1.2em;
+}
 
 
 @media (max-width: 576px) {

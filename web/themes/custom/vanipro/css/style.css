@@ -3876,7 +3876,7 @@ h2.node-title {
         width: 100%;
         clear: both;
         margin-bottom: 0 !important;
-        padding: 5px 10px 10px 10px !important;
+        padding: 5px 10px 5px 10px !important;
     }
 
     .collection-home-page {
@@ -3894,6 +3894,22 @@ h2.node-title {
     .collection-home-page.views-col {
         width: 100% !important;
         margin-right: 0px;
+    }
+    .countdown {
+        text-align: center;
+        font-size: 20px!important;
+        font-weight: bolder;
+    }
+    .section-block-number span {
+        font-size: 12px;
+        margin-bottom: 0px;
+    }
+    .number-qt {
+        width: 18px!important;
+        font-size: 10px!important;
+    }
+    .NumberListQuestion.pos {
+        top: 18%!important;
     }
 }
 

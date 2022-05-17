@@ -1,0 +1,13 @@
+uuid: b93e121f-f2b7-4e06-9a5e-ba2919030295
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: 'Front page'
+tags:
+  shortlink: '[site:url]'
+  news_keywords: 'B1 online test, on thi b1, luyen thi b1, test b1'
+  robots: 'index, follow'
+  canonical_url: '[site:url]'

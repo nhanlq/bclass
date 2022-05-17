@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.collection.body
     - field.field.node.collection.category
     - field.field.node.collection.media
+    - field.field.node.collection.student
     - node.type.collection
   module:
     - field_layout
@@ -40,3 +41,4 @@ hidden:
   category: true
   langcode: true
   media: true
+  student: true

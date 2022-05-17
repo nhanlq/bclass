@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.quiz.collection
     - field.field.node.quiz.media
     - field.field.node.quiz.quiz_type
-    - field.field.node.quiz.student
     - field.field.node.quiz.time
     - field.field.node.quiz.total_score
     - node.type.quiz
@@ -92,13 +91,6 @@ content:
   sticky:
     type: boolean_checkbox
     weight: 6
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  student:
-    type: boolean_checkbox
-    weight: 28
     region: content
     settings:
       display_label: true

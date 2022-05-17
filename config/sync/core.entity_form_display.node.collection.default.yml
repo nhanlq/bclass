@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.collection.body
     - field.field.node.collection.category
     - field.field.node.collection.media
+    - field.field.node.collection.student
     - node.type.collection
   module:
     - field_layout
@@ -82,6 +83,13 @@ content:
   sticky:
     type: boolean_checkbox
     weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  student:
+    type: boolean_checkbox
+    weight: 26
     region: content
     settings:
       display_label: true

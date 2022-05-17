@@ -32,17 +32,15 @@ class QuizController extends ControllerBase {
     $terms = \Drupal::entityTypeManager()
       ->getStorage('taxonomy_term')
       ->loadTree($vid);
+
     foreach ($terms as $term) {
-      foreach ($term->parents as $parent) {
-        if ($parent == 0) {
+        if (reset($term->parents) == 0) {
           $data[$term->tid] = [
             'parent' => Term::load($term->tid),
             'children' => $this->getChildren($term->tid),
           ];
         }
-      }
     }
-
     return $data;
   }
 
@@ -78,6 +76,7 @@ class QuizController extends ControllerBase {
     $id = FALSE;
     $ids = \Drupal::entityQuery('node')
       ->condition('type', 'collection')
+      ->condition('student',0)
       ->condition('status', 1)
       ->condition('category', $tid)
       ->execute();

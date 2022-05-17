@@ -3845,6 +3845,7 @@ h2.node-title {
     padding: 10px;
     list-style: none;
     margin-bottom: 40px;
+    min-height: 220px;
 }
 .article-list-block .views-field-field-image{
     float: left;
@@ -3855,6 +3856,7 @@ h2.node-title {
 }
 .article-list-block .views-field-field-image img{
     border: 2px solid;
+    height: 200px;
 }
 .article-list-block  .views-field-title{
     font-size: 20px;

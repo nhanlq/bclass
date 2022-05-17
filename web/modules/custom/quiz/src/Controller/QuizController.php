@@ -5,6 +5,7 @@ namespace Drupal\quiz\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\node\Entity\Node;
 use Drupal\paragraphs\Entity\Paragraph;
+use \Drupal\taxonomy\Entity\Term;
 
 /**
  * Contains the callback handler used by the quiz Module.
@@ -35,7 +36,7 @@ class QuizController extends ControllerBase {
       foreach ($term->parents as $parent) {
         if ($parent == 0) {
           $data[$term->tid] = [
-            'parent' => \Drupal\taxonomy\Entity\Term::load($term->tid),
+            'parent' => Term::load($term->tid),
             'children' => $this->getChildren($term->tid),
           ];
         }

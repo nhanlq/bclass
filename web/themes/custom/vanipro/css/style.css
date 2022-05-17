@@ -3841,6 +3841,25 @@ ul.result-list li {
 h2.node-title {
     font-size: 1.2em;
 }
+.article-list-block ul li {
+    padding: 10px;
+    list-style: none;
+    margin-bottom: 40px;
+}
+.article-list-block .views-field-field-image{
+    float: left;
+    margin-right: 20px;
+}
+.article-list-block ul li{
+    border: 2px solid var(--border-color);
+}
+.article-list-block .views-field-field-image img{
+    border: 2px solid;
+}
+.article-list-block  .views-field-title{
+    font-size: 20px;
+    font-weight: bolder;
+}
 
 
 @media (max-width: 576px) {

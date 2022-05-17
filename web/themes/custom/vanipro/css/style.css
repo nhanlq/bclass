@@ -3932,6 +3932,14 @@ h2.node-title {
     .NumberListQuestion.pos {
         top: 15%!important;
     }
+
+    .article-list-block .views-field-field-image {
+        float: none!important;
+    }
+    .article-list-block .views-field-field-image{
+        width: 100%;
+        height: auto!important;
+    }
 }
 
 

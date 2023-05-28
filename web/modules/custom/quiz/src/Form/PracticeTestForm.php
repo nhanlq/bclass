@@ -43,7 +43,7 @@ class PracticeTestForm extends FormBase {
             '#markup' => render($section->audio->entity->field_media_audio_file->view('default')),
           ];
         }
-       if($quiz->get('quiz_type')->value !== 'Writing'){
+       if($quiz->get('quiz_type')->value === 'Reading' || $quiz->get('quiz_type')->value === 'Listening'){
          $questions = $service->getQuestion($sid);
          foreach ($questions as $qid => $question) {
            $form['question_'.$qid] = [
@@ -53,13 +53,22 @@ class PracticeTestForm extends FormBase {
              '#attributes' => ['class'=>['q-number-test'], 'data-quiz'=>$qid]
            ];
          }
-       }else{
+       }
+       if ($quiz->get('quiz_type')->value === 'Writing') {
          $form['writing_'.$sid] = [
            '#type' => 'textarea',
            '#title' => t('Bài viết '.$i),
            '#rows' => 20,
          ];
        }
+       // add more speaking
+        if ($quiz->get('quiz_type')->value === 'Speaking') {
+          $build = ['#theme' => ['audio_record']];
+          $form['speaking_' . $sid] = [
+            '#type' => 'markup',
+            '#markup' => render($build)
+          ];
+        }
 
 
         $form['close_div_'.$sid] = [
@@ -88,6 +97,7 @@ class PracticeTestForm extends FormBase {
       '#prefix' => '<div class="test-form-item-submit">',
       '#suffix' => '</div>',
     ];
+    $form['#attached']['library'][] = 'quiz/quiz-action';
 
     return $form;
   }
@@ -104,20 +114,20 @@ class PracticeTestForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $user = \Drupal::currentUser();
-    $node = Node::create([
-      'type' => 'result',
-      'title' => 'Result of '.$user->id().' quiz '.$form_state->getValue('quiz'),
-      'quiz' => ['target_id'=>$form_state->getValue('quiz')],
-      'user' => ['target_id' => $user->id()],
-      'collection' => ['target_id' => $form_state->getValue('collection')],
-      'quiz_type' => $form_state->getValue('quiz_type'),
-      'result' => json_encode($form_state->getValues())
-    ]);
-    $node->save();
-    \Drupal::messenger()
-      ->addMessage('Nộp bài thành công.');
-      $response = new RedirectResponse('/b1-practice-test/result/'.$node->id()); //set url
-      $response->send();
+//    $node = Node::create([
+//      'type' => 'result',
+//      'title' => 'Result of '.$user->id().' quiz '.$form_state->getValue('quiz'),
+//      'quiz' => ['target_id'=>$form_state->getValue('quiz')],
+//      'user' => ['target_id' => $user->id()],
+//      'collection' => ['target_id' => $form_state->getValue('collection')],
+//      'quiz_type' => $form_state->getValue('quiz_type'),
+//      'result' => json_encode($form_state->getValues())
+//    ]);
+////    $node->save();
+////    \Drupal::messenger()
+////      ->addMessage('Nộp bài thành công.');
+////      $response = new RedirectResponse('/b1-practice-test/result/'.$node->id()); //set url
+////      $response->send();
 
   }
 

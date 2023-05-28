@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.section.body
     - field.field.node.section.questions
     - field.field.node.section.quiz
+    - field.field.node.section.time
     - node.type.section
   module:
     - field_layout
@@ -106,6 +107,13 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  time:
+    type: number
+    weight: 26
+    region: content
+    settings:
+      placeholder: ''
     third_party_settings: {  }
   title:
     type: string_textfield

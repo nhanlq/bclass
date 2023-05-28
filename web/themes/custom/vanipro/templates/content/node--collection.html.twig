@@ -140,8 +140,10 @@
                 <div class="practice-item__chart-icon"><i class="fas fa-microphone"></i></div>
                 <div class="practice-item__chart-title"> {{ 'Phần Nói'|trans }}</div>
             </div>
-            <div class="practice-item__btn"><a title="Hệ thống đang trong quá trình phát triển" class="practice-item__btn-action js-check-ios"
-                                               href="#">{{ 'Vào Thi'|trans }}</a>
+            <div class="practice-item__btn"><a  class="practice-item__btn-action js-check-ios"
+                                               href="{% if test_links and test_links.speaking %}
+                    {{ path('entity.node.canonical', {'node': test_links.speaking}) }}
+                                               {% else %}# {% endif %}">{{ 'Vào Thi'|trans }}</a>
             </div>
         </div>
     </div>

@@ -28,9 +28,18 @@ class QuestionNumber extends BlockBase {
    * Returns the Social Login Block.
    */
   public function build() {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    $type = null;
+    if ($node instanceof NodeInterface) {
+      $type = $node->get('quiz_type')->value;
+    }
+    if ($node->get('quiz_type')->value === 'Speaking') {
+      return [];
+    }
     return [
       '#theme' => ['question_number'],
       '#questions' => $this->getNumberList(),
+      '#type' => $type,
       '#attached' => [
         'library' => ['quiz/quiz-action'],
       ],

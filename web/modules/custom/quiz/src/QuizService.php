@@ -74,6 +74,9 @@ class QuizService {
         if($node->get('quiz_type')->value == 'Writing'){
           $data['writing'] = $node->id();
         }
+        if($node->get('quiz_type')->value == 'Speaking'){
+          $data['speaking'] = $node->id();
+        }
       }
     }
     return $data;

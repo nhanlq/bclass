@@ -33,6 +33,7 @@ module:
   file: 0
   filter: 0
   gin_toolbar: 0
+  google_analytics: 0
   help: 0
   history: 0
   image: 0
@@ -50,6 +51,7 @@ module:
   metatag_hreflang: 0
   metatag_verification: 0
   metatag_views: 0
+  mysql: 0
   node: 0
   options: 0
   page_cache: 0

@@ -1,8 +1,10 @@
 <div class="NumberListQuestion">
     <div class="row">
+      {% if type != 'Speaking' %}
         <div class="timer">
             <div class="countdown"></div>
         </div>
+      {% endif %}
         {% if questions %}
             {% for key,section in questions %}
                 <div class="section-{{ key }} section-block-number">

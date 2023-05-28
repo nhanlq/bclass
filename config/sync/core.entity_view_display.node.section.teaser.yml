@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.section.body
     - field.field.node.section.questions
     - field.field.node.section.quiz
+    - field.field.node.section.time
     - node.type.section
   module:
     - field_layout
@@ -42,3 +43,4 @@ hidden:
   langcode: true
   questions: true
   quiz: true
+  time: true

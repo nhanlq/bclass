@@ -1,0 +1,23 @@
+uuid: 043c38ce-7832-428b-a5bc-85f2fb1f44b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.time
+    - node.type.section
+id: node.section.time
+field_name: time
+entity_type: node
+bundle: section
+label: "\bThời gian làm bài"
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

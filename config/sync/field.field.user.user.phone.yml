@@ -1,0 +1,21 @@
+uuid: 3e54df65-bb06-4808-806e-13d86463b8cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.phone
+  module:
+    - telephone
+    - user
+id: user.user.phone
+field_name: phone
+entity_type: user
+bundle: user
+label: 'Điện Thoại'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

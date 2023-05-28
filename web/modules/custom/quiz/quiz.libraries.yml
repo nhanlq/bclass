@@ -1,6 +1,7 @@
 quiz-action:
   js:
     js/quiz-action.js: {}
+    js/script.js: {}
   dependencies:
     - core/drupal
     - core/modernizr

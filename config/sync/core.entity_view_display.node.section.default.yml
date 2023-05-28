@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.section.body
     - field.field.node.section.questions
     - field.field.node.section.quiz
+    - field.field.node.section.time
     - node.type.section
   module:
     - entity_reference_revisions
@@ -61,6 +62,17 @@ content:
       link: true
     third_party_settings: {  }
     weight: 102
+    region: content
+  time:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 105
     region: content
 hidden:
   langcode: true

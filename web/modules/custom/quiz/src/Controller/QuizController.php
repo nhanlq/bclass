@@ -105,9 +105,15 @@ class QuizController extends ControllerBase {
   }
 
   public function result($nid){
+    $currentUser = \Drupal::currentUser();
     $node = Node::load($nid);
+    $user_id = $node->get('user')->target_id;
     $result = $this->GetResult($node);
     $answers = [];
+    $origin_user = false;
+    if ($currentUser->id() == $user_id){
+      $origin_user = true;
+    }
     $right = 0;
     $count = 0;
     $score = 0;
@@ -143,6 +149,7 @@ class QuizController extends ControllerBase {
       '#results' => $answers,
       '#sections' => $this->getSectionByQuiz($node->get('quiz')->target_id),
       '#score' => $score,
+      '#origin_user' => $origin_user,
     ];
   }
 

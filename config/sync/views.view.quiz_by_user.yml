@@ -1,20 +1,18 @@
-uuid: 933392ac-8146-4236-bbec-54636034dc52
+uuid: 0b3bd470-d623-48ae-86c9-2706f9a7c6ac
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
-    - field.storage.node.field_image
-    - image.style.medium
-    - node.type.article
-    - system.menu.main
+    - field.storage.node.quiz
+    - field.storage.node.quiz_type
+    - field.storage.node.user
+    - node.type.result
   module:
-    - image
     - node
-    - text
+    - options
     - user
-id: tips
-label: tips
+id: quiz_by_user
+label: 'Quiz By User'
 module: views
 description: ''
 tag: ''
@@ -27,17 +25,146 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Các gợi ý và kinh nghiệm thi B1'
+      title: 'Quiz By User'
       fields:
-        field_image:
-          id: field_image
-          table: node__field_image
-          field: field_image
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
+          label: ID
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        user:
+          id: user
+          table: node__user
+          field: user
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: ''
+          label: User
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        quiz:
+          id: quiz
+          table: node__quiz
+          field: quiz
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: Quiz
           exclude: false
           alter:
             alter_text: false
@@ -66,11 +193,11 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: div
-          element_class: image-article
+          element_type: ''
+          element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -79,13 +206,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: image
+          type: entity_reference_label
           settings:
-            image_link: content
-            image_style: medium
-            image_loading:
-              attribute: lazy
-          group_column: ''
+            link: true
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -95,15 +219,15 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        title:
-          id: title
-          table: node_field_data
-          field: title
+        quiz_type:
+          id: quiz_type
+          table: node__quiz_type
+          field: quiz_type
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: ''
+          label: 'Quiz Type'
           exclude: false
           alter:
             alter_text: false
@@ -145,9 +269,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: true
+          type: list_default
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -158,21 +281,19 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        created:
-          id: created
-          table: node_field_data
-          field: created
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: created
-          plugin_id: field
-          label: ''
+          plugin_id: custom
+          label: Actions
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '<a target="_blank" href="/b1-practice-test/result/{{ nid }}">Xem kết quả</a>'
             make_link: false
             path: ''
             absolute: false
@@ -201,158 +322,24 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: timestamp
-          settings:
-            date_format: custom
-            custom_date_format: d/m/Y
-            timezone: ''
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        body:
-          id: body
-          table: node__body
-          field: body
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 400
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: true
-            trim: true
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: text_trimmed
-          settings:
-            trim_length: 600
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        view_node:
-          id: view_node
-          table: node
-          field: view_node
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          plugin_id: entity_link
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          text: 'Xem thêm'
-          output_url_as_text: false
-          absolute: false
+          hide_alter_empty: false
       pager:
-        type: full
+        type: mini
         options:
           offset: 0
-          items_per_page: 8
+          items_per_page: 50
           total_pages: null
           id: 0
           tags:
-            next: 'Next ›'
-            previous: '‹ Previous'
-            first: '« First'
-            last: 'Last »'
+            next: ››
+            previous: ‹‹
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -361,7 +348,6 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 9
       exposed_form:
         type: basic
         options:
@@ -379,7 +365,20 @@ display:
       cache:
         type: tag
         options: {  }
-      empty: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: true
+          content:
+            value: 'User {{ user }} chưa làm bài test.'
+            format: basic_html
+          tokenize: true
       sorts:
         created:
           id: created
@@ -397,7 +396,43 @@ display:
             field_identifier: ''
           exposed: false
           granularity: second
-      arguments: {  }
+      arguments:
+        user_target_id:
+          id: user_target_id
+          table: node__user
+          field: user_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: numeric
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: raw
+          default_argument_options:
+            index: 2
+            use_alias: false
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            override: false
+            items_per_page: 25
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
       filters:
         status:
           id: status
@@ -420,26 +455,14 @@ display:
           entity_field: type
           plugin_id: bundle
           value:
-            article: article
+            result: result
           expose:
             operator_limit_selection: false
             operator_list: {  }
       style:
-        type: html_list
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          type: ul
-          wrapper_class: 'item-list article-list-block'
-          class: ''
+        type: table
       row:
         type: fields
-        options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
       query:
         type: views_query
         options:
@@ -449,7 +472,20 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: 'Các bài test của user {{ user }}'
+            format: basic_html
+          tokenize: true
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -457,67 +493,32 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_image'
-  block_1:
-    id: block_1
-    display_title: Block
-    display_plugin: block
-    position: 1
-    display_options:
-      pager:
-        type: some
-        options:
-          offset: 0
-          items_per_page: 4
-      defaults:
-        pager: false
-      display_extenders:
-        metatag_display_extender:
-          metatags: {  }
-          tokenize: false
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.node.quiz'
+        - 'config:field.storage.node.quiz_type'
+        - 'config:field.storage.node.user'
   page_1:
     id: page_1
     display_title: Page
     display_plugin: page
-    position: 2
+    position: 1
     display_options:
-      display_extenders:
-        metatag_display_extender:
-          metatags: {  }
-          tokenize: false
-      path: cac-goi-y-va-kinh-nghiem
-      menu:
-        type: normal
-        title: 'Các Gợi Ý Thi B1 '
-        description: ''
-        weight: 0
-        expanded: false
-        menu_name: main
-        parent: ''
-        context: '0'
+      display_extenders: {  }
+      path: admin/quiz-by-user/%
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.node.quiz'
+        - 'config:field.storage.node.quiz_type'
+        - 'config:field.storage.node.user'

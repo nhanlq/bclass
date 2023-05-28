@@ -1,25 +1,23 @@
-uuid: 933392ac-8146-4236-bbec-54636034dc52
+uuid: 652b7657-2b73-4dd1-a34a-3e71d95e92f9
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
-    - field.storage.node.field_image
-    - image.style.medium
-    - node.type.article
-    - system.menu.main
+    - field.storage.user.phone
+    - system.menu.admin
+    - user.role.administrator
+    - user.role.editor
+    - user.role.teacher
   module:
-    - image
-    - node
-    - text
+    - telephone
     - user
-id: tips
-label: tips
+id: manage_test_result
+label: 'Manage Test Result Of Student'
 module: views
 description: ''
 tag: ''
-base_table: node_field_data
-base_field: nid
+base_table: users_field_data
+base_field: uid
 display:
   default:
     id: default
@@ -27,18 +25,20 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Các gợi ý và kinh nghiệm thi B1'
+      title: 'Manage Test Result Of Student'
       fields:
-        field_image:
-          id: field_image
-          table: node__field_image
-          field: field_image
+        uid:
+          id: uid
+          table: users_field_data
+          field: uid
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: uid
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -66,8 +66,8 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: div
-          element_class: image-article
+          element_type: ''
+          element_class: ''
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -78,14 +78,12 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: image
+          click_sort_column: value
+          type: number_integer
           settings:
-            image_link: content
-            image_style: medium
-            image_loading:
-              attribute: lazy
-          group_column: ''
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -95,15 +93,63 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        title:
-          id: title
-          table: node_field_data
-          field: title
+        name:
+          id: name
+          table: users_field_data
+          field: name
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: name
           plugin_id: field
-          label: ''
+          label: Name
+          exclude: false
+          alter:
+            alter_text: false
+            make_link: false
+            absolute: false
+            word_boundary: false
+            ellipsis: false
+            strip_tags: false
+            trim: false
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: user_name
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        mail:
+          id: mail
+          table: users_field_data
+          field: mail
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: user
+          entity_field: mail
+          plugin_id: field
+          label: Email
           exclude: false
           alter:
             alter_text: false
@@ -145,9 +191,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: true
+          type: basic_string
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -158,17 +203,15 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        created:
-          id: created
-          table: node_field_data
-          field: created
+        phone:
+          id: phone
+          table: user__phone
+          field: phone
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: created
           plugin_id: field
-          label: ''
+          label: 'Điện Thoại'
           exclude: false
           alter:
             alter_text: false
@@ -201,7 +244,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -210,11 +253,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: timestamp
+          type: telephone_link
           settings:
-            date_format: custom
-            custom_date_format: d/m/Y
-            timezone: ''
+            title: ''
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -225,19 +266,19 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        body:
-          id: body
-          table: node__body
-          field: body
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
-          label: ''
+          plugin_id: custom
+          label: Actions
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '<a target="_blank" href="/admin/quiz-by-user/{{ uid }}">Quiz Result</a>'
             make_link: false
             path: ''
             absolute: false
@@ -252,52 +293,38 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: 400
+            max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
-            strip_tags: true
-            trim: true
+            strip_tags: false
+            trim: false
             preserve_tags: ''
             html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: text_trimmed
-          settings:
-            trim_length: 600
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        view_node:
-          id: view_node
-          table: node
-          field: view_node
+          hide_alter_empty: false
+        edit_user:
+          id: edit_user
+          table: users
+          field: edit_user
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          plugin_id: entity_link
-          label: ''
+          entity_type: user
+          plugin_id: entity_link_edit
+          label: 'Cập nhật User'
           exclude: false
           alter:
             alter_text: false
@@ -330,7 +357,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -338,19 +365,19 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: 'Xem thêm'
+          text: edit
           output_url_as_text: false
           absolute: false
       pager:
         type: full
         options:
           offset: 0
-          items_per_page: 8
+          items_per_page: 20
           total_pages: null
           id: 0
           tags:
-            next: 'Next ›'
-            previous: '‹ Previous'
+            next: ››
+            previous: ‹‹
             first: '« First'
             last: 'Last »'
           expose:
@@ -373,37 +400,24 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: perm
+        type: role
         options:
-          perm: 'access content'
+          role:
+            administrator: administrator
+            teacher: teacher
+            editor: editor
       cache:
         type: tag
         options: {  }
       empty: {  }
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          order: DESC
-          expose:
-            label: ''
-            field_identifier: ''
-          exposed: false
-          granularity: second
+      sorts: {  }
       arguments: {  }
       filters:
         status:
           id: status
-          table: node_field_data
+          table: users_field_data
           field: status
-          entity_type: node
+          entity_type: user
           entity_field: status
           plugin_id: boolean
           value: '1'
@@ -412,34 +426,191 @@ display:
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
+        roles_target_id:
+          id: roles_target_id
+          table: user__roles
+          field: roles_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: user
+          entity_field: roles
+          plugin_id: user_roles
+          operator: not
           value:
-            article: article
+            administrator: administrator
+            teacher: teacher
+            editor: editor
+          group: 1
+          exposed: false
           expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
             operator_limit_selection: false
             operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+        uid:
+          id: uid
+          table: users_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: user
+          entity_field: uid
+          plugin_id: user_name
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: uid_op
+            label: Name
+            description: ''
+            use_operator: false
+            operator: uid_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: uid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              teacher: '0'
+              editor: '0'
+              student: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        mail:
+          id: mail
+          table: users_field_data
+          field: mail
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: user
+          entity_field: mail
+          plugin_id: string
+          operator: word
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: mail_op
+            label: Email
+            description: ''
+            use_operator: false
+            operator: mail_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: mail
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              teacher: '0'
+              editor: '0'
+              student: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        phone_value:
+          id: phone_value
+          table: user__phone
+          field: phone_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: string
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: phone_value_op
+            label: 'Điện Thoại'
+            description: ''
+            use_operator: false
+            operator: phone_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: phone_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              teacher: '0'
+              editor: '0'
+              student: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       style:
-        type: html_list
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          type: ul
-          wrapper_class: 'item-list article-list-block'
-          class: ''
+        type: table
       row:
         type: fields
-        options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
       query:
         type: views_query
         options:
@@ -457,67 +628,38 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
-        - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_image'
-  block_1:
-    id: block_1
-    display_title: Block
-    display_plugin: block
-    position: 1
-    display_options:
-      pager:
-        type: some
-        options:
-          offset: 0
-          items_per_page: 4
-      defaults:
-        pager: false
-      display_extenders:
-        metatag_display_extender:
-          metatags: {  }
-          tokenize: false
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.user.phone'
   page_1:
     id: page_1
     display_title: Page
     display_plugin: page
-    position: 2
+    position: 1
     display_options:
       display_extenders:
         metatag_display_extender:
           metatags: {  }
           tokenize: false
-      path: cac-goi-y-va-kinh-nghiem
+      path: admin/manage-test-result-of-student
       menu:
         type: normal
-        title: 'Các Gợi Ý Thi B1 '
+        title: 'Quản lý Sinh Viên'
         description: ''
         weight: 0
         expanded: false
-        menu_name: main
-        parent: ''
+        menu_name: admin
+        parent: system.admin_content
         context: '0'
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
-        - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.user.phone'

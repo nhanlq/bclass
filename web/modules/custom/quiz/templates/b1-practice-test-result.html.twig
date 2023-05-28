@@ -1,63 +1,68 @@
 <div class="test-hero clearfix">
-    <div class="book-img-wrap">
-        <img src="{{ collection.media.entity.field_media_image.entity.uri.value | image_style('collection') }}"/>
-    </div>
-    <div class="right-panel">
-        <div class="test-des">
-            <h3>{{ quiz.title.value }}</h3>
-            <p>
-                <span class="icon-ts icon-calendar"></span> {{ 'Đăng Ngày:'|trans }} {{ collection.created.value|date('d/m/Y') }}
-            </p>
-            <p style="font-weight:700;"><span class="icon-ts icon-taken"></span>{{ ' Lượt Test:'|trans }} {{ random(100000, 999999) }}
-            </p></div>
-    </div>
+  <div class="book-img-wrap">
+    <img src="{{ collection.media.entity.field_media_image.entity.uri.value | image_style('collection') }}"/>
+  </div>
+  <div class="right-panel">
+    <div class="test-des">
+      <h3>{{ quiz.title.value }}</h3>
+      <p>
+        <span
+          class="icon-ts icon-calendar"></span> {{ 'Đăng Ngày:'|trans }} {{ collection.created.value|date('d/m/Y') }}
+      </p>
+      <p style="font-weight:700;"><span
+          class="icon-ts icon-taken"></span>{{ ' Lượt Test:'|trans }} {{ random(100000, 999999) }}
+      </p></div>
+  </div>
 </div>
 <br/>
 <h3>Kết quả bài test </h3>
 
 {% if quiz.quiz_type.value == 'Listening' or quiz.quiz_type.value == 'Reading' %}
-    <div class="total-score">
-        <div class="label-score">Tổng số điểm: <span>{{ score }}</span></div>
-    </div>
-    <div class="result-detail">
-        {% for section in sections %}
-            <div class="section-result">
-                <h4>{{ section.title.value }}</h4>
-                <ul class="result-list">
-                    {% for qt in section.questions %}
+  <div class="total-score">
+    <div class="label-score">Tổng số điểm: <span>{{ score }}</span></div>
+  </div>
+  <div class="result-detail">
+    {% for section in sections %}
+      <div class="section-result">
+        <h4>{{ section.title.value }}</h4>
+        <ul class="result-list">
+          {% for qt in section.questions %}
 
-                        {% for result in results %}
-                            {% if qt.target_id == result.question.id.value %}
-                                <li>
-                                    <span class="number-qt">{{ result.question.number.value }}</span>
-                                    {% if result.answer is not empty %}
-                                        <span class="answer-choosen">&nbsp
-                                    <strong style="text-decoration: underline">{{ result.answer.answer_label.value }}</strong>. &nbsp;&nbsp;   {{ result.answer.answer.value }}</span>
-                                        {% if result.answer.correct.value == 1 %}
-                                            <span class="right result-icon"><i class="fa fa-check"></i></span>
-                                        {% else %}
-                                            <span class="wrong result-icon"><i class="fa fa-times"></i></span>
-                                        {% endif %}
-                                    {% else %}
-                                        <span class="wrong result-icon"><i class="fa fa-times"></i></span>
-                                    {% endif %}
-                                </li>
-                            {% endif %}
-                        {% endfor %}
-                    {% endfor %}
-                </ul>
-            </div>
-        {% endfor %}
+            {% for result in results %}
+              {% if qt.target_id == result.question.id.value %}
+                <li>
+                  <span class="number-qt">{{ result.question.number.value }}</span>
+                  {% if result.answer is not empty %}
+                    <span class="answer-choosen">&nbsp
+                                    <strong
+                                      style="text-decoration: underline">{{ result.answer.answer_label.value }}</strong>. &nbsp;&nbsp;   {{ result.answer.answer.value }}</span>
+                    {% if result.answer.correct.value == 1 %}
+                      <span class="right result-icon"><i class="fa fa-check"></i></span>
+                    {% else %}
+                      <span class="wrong result-icon"><i class="fa fa-times"></i></span>
+                    {% endif %}
+                  {% else %}
+                    <span class="wrong result-icon"><i class="fa fa-times"></i></span>
+                  {% endif %}
+                </li>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
 
-    </div>
+  </div>
 {% else %}
-    <h5>Bài thi của bạn đã được gửi đến giáo viên chuyên môn kiểm tra và chúng tôi sẽ phản hồi kết quả cho bạn trong
-        thời gian sớm nhất.</h5>
+  <h5>Bài thi của bạn đã được gửi đến giáo viên chuyên môn kiểm tra và chúng tôi sẽ phản hồi kết quả cho bạn trong
+    thời gian sớm nhất.</h5>
 {% endif %}
 
-<div class="action-back-button">
-    <a class="back__btn-action " href="{{ path('entity.node.canonical', {'node': collection.id}) }}">Quay lại bài
-        test</a>
-    <a class="re-test__btn-action " href="{{ path('entity.node.canonical', {'node': quiz.id}) }}">Làm bài lại</a>
-</div>
+{% if origin_user %}
 
+  <div class="action-back-button">
+    <a class="back__btn-action " href="{{ path('entity.node.canonical', {'node': collection.id}) }}">Quay lại bài
+      test</a>
+    <a class="re-test__btn-action " href="{{ path('entity.node.canonical', {'node': quiz.id}) }}">Làm bài lại</a>
+  </div>
+{% endif %}

@@ -101,6 +101,8 @@
                 <h4>{{ 'Bài Thi Môn NGHE HIỂU'|trans }}</h4>
             {% elseif node.quiz_type.value == 'Writing' %}
                 <h4>{{ 'Bài Thi Môn VIẾT'|trans }}</h4>
+            {%  else %}
+              <h4>{{ 'Phần Thi Nói (Speaking)'|trans }}</h4>
             {% endif %}
         </div>
 
@@ -111,5 +113,7 @@
     <div class="test-questions">
         {{ form_test }}
     </div>
+  {% if node.quiz_type.value != 'Speaking' %}
     <input type="hidden" value="{{ node.time.value }}" class="minutes-time">
+  {% endif %}
 </article>

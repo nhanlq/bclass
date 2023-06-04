@@ -48,6 +48,8 @@ function quiz_theme($existing, $type, $theme, $path): array {
     ],
     'audio_record' => [
       'variables' => [
+        'uid' => NULL,
+        'quiz_id' => NULL,
         'cache' => [
           'max-age' => 0,
         ],

@@ -20,6 +20,7 @@ class PracticeTestForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state, $quiz_id = NULL): array {
+    $user = \Drupal::currentUser();
     $service = \Drupal::service('quiz.quiz_services');
     $sections = $service->getSection($quiz_id);
     $quiz = Node::load($quiz_id);
@@ -63,7 +64,11 @@ class PracticeTestForm extends FormBase {
        }
        // add more speaking
         if ($quiz->get('quiz_type')->value === 'Speaking') {
-          $build = ['#theme' => ['audio_record']];
+          $build = [
+            '#theme' => ['audio_record'],
+            '#uid' => $user->id(),
+            '#quiz_id' => $quiz_id
+          ];
           $form['speaking_' . $sid] = [
             '#type' => 'markup',
             '#markup' => render($build)

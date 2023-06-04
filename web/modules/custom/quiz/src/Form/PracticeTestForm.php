@@ -67,7 +67,8 @@ class PracticeTestForm extends FormBase {
           $build = [
             '#theme' => ['audio_record'],
             '#uid' => $user->id(),
-            '#quiz_id' => $quiz_id
+            '#quiz_id' => $quiz_id,
+            '#time' => time(),
           ];
           $form['speaking_' . $sid] = [
             '#type' => 'markup',

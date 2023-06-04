@@ -314,7 +314,7 @@ ul.icons {
 .icon-box2 img {
   -webkit-transition: all .3s ease-out;
   -o-transition: all .3s ease-out;
-  transition: all .3s ease-out; 
+  transition: all .3s ease-out;
 }
 .icon-box:hover i,
 .icon-box2:hover i {
@@ -386,4 +386,7 @@ ul.icons {
 }
 .box-theme .button-link:hover, .box-theme a.button-link:hover, .box-theme button.button-link:hover {
   background: #ffffff;
+}
+.audio-wrapper{
+  text-align: center;
 }

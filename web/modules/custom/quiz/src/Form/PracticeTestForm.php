@@ -81,7 +81,7 @@ class PracticeTestForm extends FormBase {
           ];
           $form['audio_url'] = [
             '#type' => 'textfield',
-            '#title' => t('Audio File record'),
+            '#title' => t('File ghi âm.'),
             '#default_value' => $_GET['file'] ?? '',
             '#attributes' => ['disabled'=>'disabled']
           ];

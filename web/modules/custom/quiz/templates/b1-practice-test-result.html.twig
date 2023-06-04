@@ -53,9 +53,50 @@
     {% endfor %}
 
   </div>
-{% else %}
-  <h5>Bài thi của bạn đã được gửi đến giáo viên chuyên môn kiểm tra và chúng tôi sẽ phản hồi kết quả cho bạn trong
-    thời gian sớm nhất.</h5>
+{% elseif quiz.quiz_type.value == 'Writing' %}
+  <p>Bài thi của bạn đã được gửi đến giáo viên chuyên môn kiểm tra và chúng tôi sẽ phản hồi kết quả cho bạn trong
+    thời gian sớm nhất.</p>
+  <div class="writting-result">
+    {% if origin_user %}
+    <h4>Xem lại bài viết</h4>
+    {% else %}
+      <h4>Xem bài viết</h4>
+    {% endif %}
+    {% if result.writing_1 is not null %}
+      <h5>Phần bài viết 1.</h5>
+  <p>
+    {{ result.writing_1 }}
+  </p>
+    {% endif %}
+    {% if result.writing_2 is not null %}
+      <h5>Phần bài viết 2.</h5>
+      <p>
+        {{ result.writing_2 }}
+      </p>
+    {% endif %}
+
+    {% if result.writing_3 is not null %}
+      <h5>Phần bài viết 3.</h5>
+      <p>
+        {{ result.writing_3 }}
+      </p>
+    {% endif %}
+
+  </div>
+ {% else%}
+   <p>Bài thi của bạn đã được gửi đến giáo viên chuyên môn kiểm tra và chúng tôi sẽ phản hồi kết quả cho bạn trong
+     thời gian sớm nhất.</p>
+   <div class="speaking-result">
+     {% if origin_user %}
+<h4>Nghe lại phần thi nói</h4>
+     {% else %}
+       <h4>Nghe audio</h4>
+     {% endif %}
+     <audio controls>
+       <source src="{{ result.audio_url }}" type="audio/ogg">
+       Your browser does not support the audio element.
+     </audio>
+   </div>
 {% endif %}
 
 {% if origin_user %}

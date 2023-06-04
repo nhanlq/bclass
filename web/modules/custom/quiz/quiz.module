@@ -32,6 +32,7 @@ function quiz_theme($existing, $type, $theme, $path): array {
         'sections' => NULL,
         'score' => NULL,
         'origin_user' =>NULL,
+        'result' => NULL,
         'cache' => [
           'max-age' => 0,
         ],
@@ -51,6 +52,7 @@ function quiz_theme($existing, $type, $theme, $path): array {
         'uid' => NULL,
         'quiz_id' => NULL,
         'time' =>  NULL,
+        'class' => NULL,
         'cache' => [
           'max-age' => 0,
         ],

@@ -136,9 +136,10 @@ class QuizController extends ControllerBase {
         $count += 1;
       }
     }
-    $evag = $quiz->get('total_score')->value / $count;
-    $score = $evag * $right;
-
+    if ($node->get('quiz_type')->value == 'Reading' || $node->get('quiz_type')->value == 'Listening') {
+      $evag = $quiz->get('total_score')->value / $count;
+      $score = $evag * $right;
+    }
 
 
     return [
@@ -150,6 +151,7 @@ class QuizController extends ControllerBase {
       '#sections' => $this->getSectionByQuiz($node->get('quiz')->target_id),
       '#score' => $score,
       '#origin_user' => $origin_user,
+      '#result' => $result,
     ];
   }
 

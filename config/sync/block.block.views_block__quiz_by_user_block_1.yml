@@ -6,6 +6,7 @@ dependencies:
     - views.view.quiz_by_user
   module:
     - system
+    - user
     - views
   theme:
     - vanipro
@@ -28,3 +29,13 @@ visibility:
     id: request_path
     negate: false
     pages: '/user/*'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
+      teacher: teacher
+      editor: editor
+      student: student

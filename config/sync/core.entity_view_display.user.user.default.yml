@@ -3,13 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.fullname
     - field.field.user.user.phone
     - field.field.user.user.user_picture
-    - image.style.thumbnail
   module:
     - field_layout
-    - image
     - layout_discovery
+    - telephone
     - user
 third_party_settings:
   field_layout:
@@ -23,26 +23,23 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
-  member_for:
-    weight: 5
-    region: content
-  phone:
-    type: basic_string
+  fullname:
+    type: string
     label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 6
-    region: content
-  user_picture:
-    type: image
-    label: hidden
     settings:
-      image_link: content
-      image_style: thumbnail
-      image_loading:
-        attribute: lazy
+      link_to_entity: false
     third_party_settings: {  }
     weight: 0
     region: content
+  phone:
+    type: telephone_link
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   langcode: true
+  member_for: true
+  user_picture: true

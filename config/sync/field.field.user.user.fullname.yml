@@ -1,0 +1,20 @@
+uuid: 373501b5-8614-4000-b970-bae30d078dc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.fullname
+  module:
+    - user
+id: user.user.fullname
+field_name: fullname
+entity_type: user
+bundle: user
+label: 'Họ và tên'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -6,4 +6,4 @@ verify_hostname: true
 default_challenge: captcha/Math
 error_message: 'Antibot verification failed.'
 cacheable: true
-library_use_recaptcha_net: true
+library_use_recaptcha_net: false

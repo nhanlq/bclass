@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4c158fc3ca5af5b7ab94f95a62e21791",
+    "content-hash": "fb2b1c8afb65ce9740b0e876e7ac245d",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1379,25 +1379,29 @@
         },
         {
             "name": "doctrine/deprecations",
-            "version": "v1.0.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/deprecations.git",
-                "reference": "0e2a4f1f8cdfc7a92ec3b01c9334898c806b30de"
+                "reference": "612a3ee5ab0d5dd97b7cf3874a6efe24325efac3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/0e2a4f1f8cdfc7a92ec3b01c9334898c806b30de",
-                "reference": "0e2a4f1f8cdfc7a92ec3b01c9334898c806b30de",
+                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/612a3ee5ab0d5dd97b7cf3874a6efe24325efac3",
+                "reference": "612a3ee5ab0d5dd97b7cf3874a6efe24325efac3",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1|^8.0"
+                "php": "^7.1 || ^8.0"
             },
             "require-dev": {
                 "doctrine/coding-standard": "^9",
-                "phpunit/phpunit": "^7.5|^8.5|^9.5",
-                "psr/log": "^1|^2|^3"
+                "phpstan/phpstan": "1.4.10 || 1.10.15",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
+                "psalm/plugin-phpunit": "0.18.4",
+                "psr/log": "^1 || ^2 || ^3",
+                "vimeo/psalm": "4.30.0 || 5.12.0"
             },
             "suggest": {
                 "psr/log": "Allows logging deprecations via PSR-3 logger implementation"
@@ -1416,9 +1420,9 @@
             "homepage": "https://www.doctrine-project.org/",
             "support": {
                 "issues": "https://github.com/doctrine/deprecations/issues",
-                "source": "https://github.com/doctrine/deprecations/tree/v1.0.0"
+                "source": "https://github.com/doctrine/deprecations/tree/v1.1.1"
             },
-            "time": "2022-05-02T15:47:09+00:00"
+            "time": "2023-06-03T09:27:29+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -1653,6 +1657,90 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
+            }
+        },
+        {
+            "name": "drupal/captcha",
+            "version": "1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/captcha.git",
+                "reference": "8.x-1.10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/captcha-8.x-1.10.zip",
+                "reference": "8.x-1.10",
+                "shasum": "17fb9e34d03409809e3afd03bbeb8cbb489e7d0a"
+            },
+            "require": {
+                "drupal/core": "^8.9 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.10",
+                    "datestamp": "1680254570",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "branch-alias": {
+                    "dev-8.x-1.x": "1.x-dev"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Anybody",
+                    "homepage": "https://www.drupal.org/user/291091"
+                },
+                {
+                    "name": "elachlan",
+                    "homepage": "https://www.drupal.org/user/1021502"
+                },
+                {
+                    "name": "Grevil",
+                    "homepage": "https://www.drupal.org/user/3668491"
+                },
+                {
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "naveenvalecha",
+                    "homepage": "https://www.drupal.org/user/2665733"
+                },
+                {
+                    "name": "podarok",
+                    "homepage": "https://www.drupal.org/user/116002"
+                },
+                {
+                    "name": "RobLoach",
+                    "homepage": "https://www.drupal.org/user/61114"
+                },
+                {
+                    "name": "soxofaan",
+                    "homepage": "https://www.drupal.org/user/41478"
+                },
+                {
+                    "name": "thomas.frobieter",
+                    "homepage": "https://www.drupal.org/user/409335"
+                },
+                {
+                    "name": "wundo",
+                    "homepage": "https://www.drupal.org/user/25523"
+                }
+            ],
+            "description": "The CAPTCHA module provides this feature to virtually any user facing web form on a Drupal site.",
+            "homepage": "https://www.drupal.org/project/captcha",
+            "support": {
+                "source": "https://git.drupalcode.org/project/captcha",
+                "issues": "https://www.drupal.org/project/issues/captcha"
             }
         },
         {
@@ -3148,17 +3236,17 @@
         },
         {
             "name": "drupal/metatag",
-            "version": "1.24.0",
+            "version": "1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/metatag.git",
-                "reference": "8.x-1.24"
+                "reference": "8.x-1.25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/metatag-8.x-1.24.zip",
-                "reference": "8.x-1.24",
-                "shasum": "e4758243e5a586b89def003f8e2635b7b736389b"
+                "url": "https://ftp.drupal.org/files/projects/metatag-8.x-1.25.zip",
+                "reference": "8.x-1.25",
+                "shasum": "8603d84df3b93dd02dae601d57a6347598829e56"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10",
@@ -3169,7 +3257,7 @@
                 "drupal/hal": "^9 || ^1 || ^2",
                 "drupal/metatag_dc": "*",
                 "drupal/metatag_open_graph": "*",
-                "drupal/page_manager": "^4.0",
+                "drupal/page_manager": "*",
                 "drupal/panelizer": "^4.0",
                 "drupal/redirect": "^1.0",
                 "drupal/webprofiler": "^9 || ^10",
@@ -3178,8 +3266,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.24",
-                    "datestamp": "1685131038",
+                    "version": "8.x-1.25",
+                    "datestamp": "1685541226",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3403,6 +3491,60 @@
             "homepage": "https://www.drupal.org/project/range",
             "support": {
                 "source": "https://git.drupalcode.org/project/range"
+            }
+        },
+        {
+            "name": "drupal/recaptcha_v3",
+            "version": "2.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/recaptcha_v3.git",
+                "reference": "2.0.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/recaptcha_v3-2.0.0-alpha1.zip",
+                "reference": "2.0.0-alpha1",
+                "shasum": "4fc38761a5eff4e776f95e01a9cf61f496f3efee"
+            },
+            "require": {
+                "drupal/captcha": "*",
+                "drupal/core": "^9.5 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-alpha1",
+                    "datestamp": "1681534189",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "B-Prod",
+                    "homepage": "https://www.drupal.org/user/407852"
+                },
+                {
+                    "name": "dench0",
+                    "homepage": "https://www.drupal.org/user/896504"
+                },
+                {
+                    "name": "majid.ali",
+                    "homepage": "https://www.drupal.org/user/1271330"
+                }
+            ],
+            "description": "The reCaptcha V3 module provides integration with Google reCaptcha V3 and CAPTCHA module.",
+            "homepage": "https://www.drupal.org/project/recaptcha_v3",
+            "support": {
+                "source": "https://git.drupalcode.org/project/recaptcha_v3",
+                "error": "require.drupal/captcha : invalid version constraint (Could not parse version constraint ^2.0@beta': Invalid version string \"^2.0@beta'\")"
             }
         },
         {
@@ -3696,17 +3838,17 @@
         },
         {
             "name": "drupal/views_bulk_operations",
-            "version": "4.2.3",
+            "version": "4.2.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/views_bulk_operations.git",
-                "reference": "4.2.3"
+                "reference": "4.2.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/views_bulk_operations-4.2.3.zip",
-                "reference": "4.2.3",
-                "shasum": "56014a68924b358caca5c41cd74b995fc0cc5e13"
+                "url": "https://ftp.drupal.org/files/projects/views_bulk_operations-4.2.4.zip",
+                "reference": "4.2.4",
+                "shasum": "26f1dea73780fab2e338380ae803feca989172e1"
             },
             "require": {
                 "drupal/core": "^9.4 || ^10",
@@ -3721,8 +3863,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.2.3",
-                    "datestamp": "1673360841",
+                    "version": "4.2.4",
+                    "datestamp": "1685368786",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4086,16 +4228,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "3.2.5",
+            "version": "3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "b531a2311709443320c786feb4519cfaf94af796"
+                "reference": "e5997fa97e8790cdae03a9cbd5e78e45e3c7bda7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/b531a2311709443320c786feb4519cfaf94af796",
-                "reference": "b531a2311709443320c786feb4519cfaf94af796",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/e5997fa97e8790cdae03a9cbd5e78e45e3c7bda7",
+                "reference": "e5997fa97e8790cdae03a9cbd5e78e45e3c7bda7",
                 "shasum": ""
             },
             "require": {
@@ -4141,7 +4283,7 @@
             ],
             "support": {
                 "issues": "https://github.com/egulias/EmailValidator/issues",
-                "source": "https://github.com/egulias/EmailValidator/tree/3.2.5"
+                "source": "https://github.com/egulias/EmailValidator/tree/3.2.6"
             },
             "funding": [
                 {
@@ -4149,7 +4291,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-01-02T17:26:14+00:00"
+            "time": "2023-06-01T07:04:22+00:00"
         },
         {
             "name": "enlightn/security-checker",
@@ -9093,16 +9235,16 @@
         },
         {
             "name": "symfony/var-exporter",
-            "version": "v6.2.10",
+            "version": "v6.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-exporter.git",
-                "reference": "9a07920c2058bafee921ce4d90aeef2193837d63"
+                "reference": "db5416d04269f2827d8c54331ba4cfa42620d350"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/9a07920c2058bafee921ce4d90aeef2193837d63",
-                "reference": "9a07920c2058bafee921ce4d90aeef2193837d63",
+                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/db5416d04269f2827d8c54331ba4cfa42620d350",
+                "reference": "db5416d04269f2827d8c54331ba4cfa42620d350",
                 "shasum": ""
             },
             "require": {
@@ -9147,7 +9289,7 @@
                 "serialize"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-exporter/tree/v6.2.10"
+                "source": "https://github.com/symfony/var-exporter/tree/v6.3.0"
             },
             "funding": [
                 {
@@ -9163,7 +9305,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-04-21T08:33:05+00:00"
+            "time": "2023-04-21T08:48:44+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -11055,16 +11197,16 @@
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "1.7.1",
+            "version": "1.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "dfc078e8af9c99210337325ff5aa152872c98714"
+                "reference": "b2fe4d22a5426f38e014855322200b97b5362c0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/dfc078e8af9c99210337325ff5aa152872c98714",
-                "reference": "dfc078e8af9c99210337325ff5aa152872c98714",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/b2fe4d22a5426f38e014855322200b97b5362c0d",
+                "reference": "b2fe4d22a5426f38e014855322200b97b5362c0d",
                 "shasum": ""
             },
             "require": {
@@ -11107,9 +11249,9 @@
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "support": {
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
-                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.7.1"
+                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.7.2"
             },
-            "time": "2023-03-27T19:02:04+00:00"
+            "time": "2023-05-30T18:13:47+00:00"
         },
         {
             "name": "phpspec/prophecy",
@@ -13309,6 +13451,7 @@
     "stability-flags": {
         "drupal/entity_usage": 10,
         "drupal/gin": 15,
+        "drupal/recaptcha_v3": 15,
         "drupal/typed_data": 15
     },
     "prefer-stable": true,

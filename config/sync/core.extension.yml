@@ -3,10 +3,12 @@ _core:
 module:
   admin_toolbar: 0
   automated_cron: 0
+  ban: 0
   banner: 0
   block: 0
   block_content: 0
   breakpoint: 0
+  captcha: 0
   ckeditor: 0
   ckeditor_media_embed: 0
   color: 0
@@ -14,6 +16,7 @@ module:
   config: 0
   config_translation: 0
   contact: 0
+  content_moderation: 0
   contextual: 0
   csv_serialization: 0
   ctools: 0
@@ -62,6 +65,7 @@ module:
   quiz: 0
   range: 0
   rdf: 0
+  recaptcha_v3: 0
   rest: 0
   search: 0
   serialization: 0

@@ -53,6 +53,7 @@ function quiz_theme($existing, $type, $theme, $path): array {
         'quiz_id' => NULL,
         'time' =>  NULL,
         'class' => NULL,
+        'body' => NULL,
         'cache' => [
           'max-age' => 0,
         ],

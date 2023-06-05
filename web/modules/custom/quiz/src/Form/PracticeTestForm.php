@@ -64,10 +64,6 @@ class PracticeTestForm extends FormBase {
        }
        // add more speaking
         if ($quiz->get('quiz_type')->value === 'Speaking') {
-          $form['section_' . $sid] = [
-            '#type' => 'markup',
-            '#markup' => $section->get('body')->value,
-          ];
           $hidden = '';
           if (isset($_GET['file']) && !empty($_GET['file'])) {
             $hidden = 'hidden';
@@ -77,6 +73,7 @@ class PracticeTestForm extends FormBase {
             '#uid' => $user->id(),
             '#quiz_id' => $quiz_id,
             '#time' => time(),
+            '#body' => $section->get('body')->value,
             '#class' => $hidden
           ];
           $form['speaking_' . $sid] = [

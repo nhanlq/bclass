@@ -1,7 +1,7 @@
 _core:
   default_config_hash: hSAUW7BoAd9YUpKcVKyZpW4wY67g4XZAYlt3Vnz6SVA
 enabled_default: 1
-default_challenge: recaptcha_v3/recaptcha_v3
+default_challenge: image_captcha/Image
 description: 'Điền vào ô tính'
 administration_mode: false
 allow_on_admin_pages: false

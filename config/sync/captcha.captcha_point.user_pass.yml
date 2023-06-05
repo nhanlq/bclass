@@ -5,5 +5,5 @@ dependencies: {  }
 _core:
   default_config_hash: qZeHI5fZ9WQRKsfl8FMBwzk3puSsWCRtWKEZh04JJUo
 formId: user_pass
-captchaType: recaptcha_v3/recaptcha_v3
+captchaType: image_captcha/Image
 label: user_pass

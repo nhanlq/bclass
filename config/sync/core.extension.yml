@@ -40,6 +40,7 @@ module:
   help: 0
   history: 0
   image: 0
+  image_captcha: 0
   jquery_countdown_timer: 0
   language: 0
   layout_discovery: 0

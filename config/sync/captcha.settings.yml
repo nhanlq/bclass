@@ -1,14 +1,14 @@
 _core:
   default_config_hash: hSAUW7BoAd9YUpKcVKyZpW4wY67g4XZAYlt3Vnz6SVA
-enabled_default: 1
+enabled_default: 0
 default_challenge: image_captcha/Image
 description: 'Điền vào ô tính'
 administration_mode: false
 allow_on_admin_pages: false
 whitelist_ips: ''
-add_captcha_description: true
+add_captcha_description: false
 wrong_captcha_response_message: 'Sai kết quả'
-default_validation: 1
-persistence: 1
+default_validation: 0
+persistence: 0
 enable_stats: false
 log_wrong_responses: false

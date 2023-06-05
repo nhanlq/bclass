@@ -3,7 +3,7 @@ _core:
 site_key: 6LcP6m0mAAAAAMKJQ5ta6HaAlA5lZj560l0qt8U8
 secret_key: 6LcP6m0mAAAAANrXtuX-E13VwFE_P_RN894enSpC
 verify_hostname: true
-default_challenge: captcha/Math
+default_challenge: ''
 error_message: 'Antibot verification failed.'
 cacheable: true
 library_use_recaptcha_net: false

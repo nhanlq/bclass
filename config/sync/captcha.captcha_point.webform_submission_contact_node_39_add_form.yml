@@ -3,5 +3,5 @@ langcode: en
 status: true
 dependencies: {  }
 formId: webform_submission_contact_node_39_add_form
-captchaType: captcha/Math
+captchaType: recaptcha_v3/recaptcha_v3
 label: webform_submission_contact_node_39_add_form

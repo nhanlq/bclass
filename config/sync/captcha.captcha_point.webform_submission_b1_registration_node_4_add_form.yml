@@ -3,5 +3,5 @@ langcode: en
 status: true
 dependencies: {  }
 formId: webform_submission_b1_registration_node_4_add_form
-captchaType: captcha/Math
+captchaType: recaptcha_v3/recaptcha_v3
 label: webform_submission_b1_registration_node_4_add_form

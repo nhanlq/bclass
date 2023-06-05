@@ -5,4 +5,4 @@ dependencies: {  }
 id: recaptcha_v3
 label: 'Recaptcha V3'
 threshold: 0.5
-challenge: default
+challenge: captcha/Math

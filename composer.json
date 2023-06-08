@@ -25,6 +25,7 @@
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-recommended": "^9.1",
         "drupal/csv_serialization": "^2.0",
+        "drupal/devel": "^5.1",
         "drupal/entity": "^1.2",
         "drupal/entity_reference_revisions": "^1.9",
         "drupal/entity_usage": "^2.0@beta",

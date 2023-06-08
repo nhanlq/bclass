@@ -4,7 +4,6 @@
  * Implements hook_theme().
  */
 use \Drupal\Core\Form\FormStateInterface;
-
 function quiz_theme($existing, $type, $theme, $path): array {
   return [
     'quiz' => [
@@ -62,6 +61,13 @@ function quiz_theme($existing, $type, $theme, $path): array {
   ];
 }
 
+/**
+ * Implement hook_form_alter().
+ * @param $form
+ * @param FormStateInterface $form_state
+ * @param $form_id
+ * @return void
+ */
 function quiz_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if($form_id == 'node_quiz_form'){
     if(isset($_GET['collection'])){
@@ -75,4 +81,29 @@ function quiz_form_alter(&$form, FormStateInterface $form_state, $form_id) {
     }
   }
 }
+
+/**
+ * Implement hook_preprocess_node().
+ * @param $variables
+ * @return void
+ */
+function quiz_preprocess_node(&$variables){
+  if ($variables['node']->bundle() == 'collection'){
+    $current_user = \Drupal::currentUser();
+    $node = $variables['node'];
+    if ($node->get('student')->value == 1) {
+      if (in_array('student', $current_user->getRoles()) ||
+      in_array('editor', $current_user->getRoles()) ||
+      in_array('teacher', $current_user->getRoles()) ||
+      in_array('administrator', $current_user->getRoles())) {
+
+      }else{
+        throw new \Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException();
+      }
+
+    }
+  }
+
+}
+
 

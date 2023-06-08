@@ -7,6 +7,7 @@ dependencies:
     - system.menu.admin
     - user.role.administrator
     - user.role.editor
+    - user.role.student
     - user.role.teacher
   module:
     - telephone
@@ -559,9 +560,9 @@ display:
           entity_type: user
           entity_field: roles
           plugin_id: user_roles
-          operator: not
+          operator: or
           value:
-            administrator: administrator
+            student: student
           group: 1
           exposed: false
           expose:

@@ -1,9 +1,12 @@
-<div class="audio-wrapper" style="text-align: center">
+<div class="audio-wrapper">
+
   <p>{{ body|raw }}</p>
+  <div style="text-align: center;">
 <a class="voice-record {{ class }}" href="https://record.b1onlinetests.com?uid={{ uid }}&quiz_id={{ quiz_id }}&time={{ time }}&destination={{ url('<current>') }}">
   <img src="/themes/custom/vanipro/images/icons/record.png" width="100px" height="auto"/>
   <p>Bắt Đầu Ghi Âm</p>
 </a>
+  </div>
 </div>
 <style type="text/css">
   .form-item-audio-url{

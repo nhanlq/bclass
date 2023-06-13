@@ -138,7 +138,7 @@ class QuizController extends ControllerBase {
     }
     if ($node->get('quiz_type')->value == 'Reading' || $node->get('quiz_type')->value == 'Listening') {
       $evag = $quiz->get('total_score')->value / $count;
-      $score = $evag * $right;
+      $score = number_format($evag * $right,2);
     }
 
 

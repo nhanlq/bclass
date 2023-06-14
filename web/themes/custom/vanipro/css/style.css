@@ -3719,6 +3719,7 @@ a.practice-item__btn-action {
     background: var(--circle-three);
     border-radius: 15px 15px;
     cursor: pointer;
+    margin-bottom: 5px;
 }
 
 .number-of {

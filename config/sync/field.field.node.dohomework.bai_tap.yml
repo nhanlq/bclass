@@ -1,0 +1,29 @@
+uuid: 2d320f76-d83c-4066-8512-3842296130f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.bai_tap
+    - node.type.dohomework
+    - node.type.homework
+id: node.dohomework.bai_tap
+field_name: bai_tap
+entity_type: node
+bundle: dohomework
+label: 'Bài tập'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      homework: homework
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,40 @@
+uuid: 425b2093-6018-4395-bf53-c5dc0c3e572a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.class.course
+    - field.field.node.class.duration
+    - field.field.node.class.hoc_vien
+    - field.field.node.class.teacher
+    - field.field.node.class.thoi_gian
+    - field.field.node.class.training
+    - node.type.class
+  module:
+    - field_layout
+    - layout_discovery
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: node.class.teaser
+targetEntityType: node
+bundle: class
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  course: true
+  duration: true
+  hoc_vien: true
+  langcode: true
+  teacher: true
+  thoi_gian: true
+  training: true

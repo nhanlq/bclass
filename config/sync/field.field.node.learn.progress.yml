@@ -1,0 +1,19 @@
+uuid: c0e0493a-ff81-4fbc-a1ec-33712100481d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.progress
+    - node.type.learn
+id: node.learn.progress
+field_name: progress
+entity_type: node
+bundle: learn
+label: Progress
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

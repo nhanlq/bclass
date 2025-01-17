@@ -1,0 +1,21 @@
+uuid: e761afb5-e4fe-44dd-ae41-bd8582f15a81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.thoi_gian
+    - node.type.class
+  module:
+    - datetime_range
+id: node.class.thoi_gian
+field_name: thoi_gian
+entity_type: node
+bundle: class
+label: 'Thời gian'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

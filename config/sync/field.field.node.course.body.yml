@@ -1,0 +1,23 @@
+uuid: a7fea16e-82f7-4db0-b593-78ff7d6a48fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.course
+  module:
+    - text
+id: node.course.body
+field_name: body
+entity_type: node
+bundle: course
+label: 'Giới thiệu chương trình'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

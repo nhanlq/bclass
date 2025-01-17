@@ -1,0 +1,45 @@
+uuid: 61c80906-70c2-4fda-b33e-f6dc13f3e758
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dohomework.bai_tap
+    - field.field.node.dohomework.lop
+    - node.type.dohomework
+  module:
+    - field_layout
+    - layout_discovery
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: node.dohomework.default
+targetEntityType: node
+bundle: dohomework
+mode: default
+content:
+  bai_tap:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  lop:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+hidden:
+  langcode: true

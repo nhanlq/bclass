@@ -1,0 +1,34 @@
+uuid: 2dce5ef7-204c-47ab-9c4b-9bc8406bd969
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.learn.course
+    - field.field.node.learn.lop
+    - field.field.node.learn.progress
+    - node.type.learn
+  module:
+    - field_layout
+    - layout_discovery
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: node.learn.teaser
+targetEntityType: node
+bundle: learn
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  course: true
+  langcode: true
+  lop: true
+  progress: true

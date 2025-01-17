@@ -1,0 +1,84 @@
+uuid: 4ef666e3-1e17-4804-9d7d-2fe66993fe8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.class.course
+    - field.field.node.class.duration
+    - field.field.node.class.hoc_vien
+    - field.field.node.class.teacher
+    - field.field.node.class.thoi_gian
+    - field.field.node.class.training
+    - node.type.class
+  module:
+    - datetime_range
+    - field_layout
+    - layout_discovery
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: node.class.default
+targetEntityType: node
+bundle: class
+mode: default
+content:
+  course:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  duration:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  hoc_vien:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  teacher:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  thoi_gian:
+    type: daterange_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+      separator: '-'
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  training:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+hidden:
+  langcode: true

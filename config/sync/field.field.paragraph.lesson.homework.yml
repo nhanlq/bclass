@@ -1,0 +1,29 @@
+uuid: 67adbe45-8bde-4ec8-8f99-93e66b7d5eca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.homework
+    - node.type.dohomework
+    - paragraphs.paragraphs_type.lesson
+id: paragraph.lesson.homework
+field_name: homework
+entity_type: paragraph
+bundle: lesson
+label: Homework
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      dohomework: dohomework
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

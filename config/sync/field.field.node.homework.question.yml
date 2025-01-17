@@ -1,0 +1,40 @@
+uuid: c068c1ca-404f-421a-9350-ffbc60915d8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.question
+    - node.type.homework
+    - paragraphs.paragraphs_type.question
+  module:
+    - entity_reference_revisions
+id: node.homework.question
+field_name: question
+entity_type: node
+bundle: homework
+label: Question
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      question: question
+    negate: 0
+    target_bundles_drag_drop:
+      from_library:
+        weight: 5
+        enabled: false
+      multiple_choice:
+        weight: 6
+        enabled: false
+      question:
+        weight: 7
+        enabled: true
+      single_choice:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

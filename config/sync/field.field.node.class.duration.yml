@@ -1,0 +1,29 @@
+uuid: 8c4a5855-184a-400d-8f89-cb70b49a9269
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.duration
+    - node.type.class
+    - taxonomy.vocabulary.duration
+id: node.class.duration
+field_name: duration
+entity_type: node
+bundle: class
+label: Duration
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      duration: duration
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

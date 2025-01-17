@@ -1,0 +1,20 @@
+uuid: 9ea7b01e-f6d1-4a90-b5fe-5811b6c14965
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime_range
+    - node
+id: node.thoi_gian
+field_name: thoi_gian
+entity_type: node
+type: daterange
+settings:
+  datetime_type: date
+module: datetime_range
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

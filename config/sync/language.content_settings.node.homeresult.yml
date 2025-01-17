@@ -1,0 +1,11 @@
+uuid: be2329ac-5752-4ce5-9430-79268c49bb49
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.homeresult
+id: node.homeresult
+target_entity_type_id: node
+target_bundle: homeresult
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,19 @@
+uuid: 930b67fd-e332-452c-8162-17d2726189dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.comment
+    - node.type.homeresult
+id: node.homeresult.comment
+field_name: comment
+entity_type: node
+bundle: homeresult
+label: Comment
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

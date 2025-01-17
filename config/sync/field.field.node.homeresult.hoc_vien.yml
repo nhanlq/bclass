@@ -1,0 +1,21 @@
+uuid: b1cecac5-743b-486a-98a0-6a5e901789fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.hoc_vien
+    - node.type.homeresult
+id: node.homeresult.hoc_vien
+field_name: hoc_vien
+entity_type: node
+bundle: homeresult
+label: 'Học viên'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings: {  }
+field_type: entity_reference

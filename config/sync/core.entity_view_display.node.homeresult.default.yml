@@ -1,0 +1,91 @@
+uuid: e133bfb4-e4e5-4699-b995-47979b4faf5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.homeresult.bai_tap
+    - field.field.node.homeresult.comment
+    - field.field.node.homeresult.hoc_vien
+    - field.field.node.homeresult.lop
+    - field.field.node.homeresult.result
+    - field.field.node.homeresult.total_score
+    - field.field.node.homeresult.training
+    - node.type.homeresult
+  module:
+    - field_layout
+    - layout_discovery
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: node.homeresult.default
+targetEntityType: node
+bundle: homeresult
+mode: default
+content:
+  bai_tap:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  comment:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  hoc_vien:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  lop:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  result:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  total_score:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  training:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+hidden:
+  langcode: true

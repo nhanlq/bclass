@@ -1,0 +1,20 @@
+uuid: 8bafbd9c-e4ba-4317-b8db-f472e1088c5b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.homework
+field_name: homework
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

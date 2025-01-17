@@ -1,0 +1,19 @@
+uuid: e3bfb357-070c-4856-a9d9-5e4e8f70563b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.lesson_name
+    - paragraphs.paragraphs_type.lesson
+id: paragraph.lesson.lesson_name
+field_name: lesson_name
+entity_type: paragraph
+bundle: lesson
+label: 'Tên bài học'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

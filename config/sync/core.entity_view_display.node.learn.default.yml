@@ -1,0 +1,54 @@
+uuid: 62e8ea41-3901-4374-a884-94c30018910d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.learn.course
+    - field.field.node.learn.lop
+    - field.field.node.learn.progress
+    - node.type.learn
+  module:
+    - field_layout
+    - layout_discovery
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: node.learn.default
+targetEntityType: node
+bundle: learn
+mode: default
+content:
+  course:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  lop:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  progress:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+hidden:
+  langcode: true

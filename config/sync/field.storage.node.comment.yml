@@ -1,19 +1,16 @@
-uuid: 31b9c649-cc15-40b9-a280-c4f729f5baff
+uuid: a1e7152c-3e45-46ab-abf1-f017042b2324
 langcode: en
 status: true
 dependencies:
   module:
-    - comment
     - node
-_core:
-  default_config_hash: ktCna9xmWvYZIUfOCUyDQvedn5RtnS4CRmEIwNmvYjc
 id: node.comment
 field_name: comment
 entity_type: node
-type: comment
+type: string_long
 settings:
-  comment_type: comment
-module: comment
+  case_sensitive: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

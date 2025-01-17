@@ -1,0 +1,21 @@
+uuid: efc6edc3-7428-4803-9ec4-b65a693dca6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.question
+    - paragraphs.paragraphs_type.lesson
+  module:
+    - text
+id: paragraph.lesson.question
+field_name: question
+entity_type: paragraph
+bundle: lesson
+label: 'Nội dung bài học'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,8 @@
+uuid: 8cc84bd9-7b5d-4605-a34e-e3b83232e560
+langcode: en
+status: true
+dependencies: {  }
+name: 'Thời gian đào tạo'
+vid: duration
+description: ''
+weight: 0

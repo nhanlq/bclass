@@ -1,0 +1,21 @@
+uuid: 13822e6d-e6fb-47e2-b042-dd4fe1902b9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.noi_dung_yeu_cau
+    - node.type.homework
+  module:
+    - text
+id: node.homework.noi_dung_yeu_cau
+field_name: noi_dung_yeu_cau
+entity_type: node
+bundle: homework
+label: 'Nội dung yêu cầu'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

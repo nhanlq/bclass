@@ -1,0 +1,20 @@
+uuid: 16d6c4a6-fa3b-49cc-9374-d6c34db8bab3
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+id: paragraph.video
+field_name: video
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

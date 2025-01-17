@@ -1,0 +1,37 @@
+uuid: f577cafe-a657-42b5-81dd-cdb171b8dbc4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.tai_lieu
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.course
+id: node.course.tai_lieu
+field_name: tai_lieu
+entity_type: node
+bundle: course
+label: 'Tài liệu'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      audio: audio
+      document: document
+      image: image
+      remote_video: remote_video
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: audio
+field_type: entity_reference

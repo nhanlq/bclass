@@ -1,0 +1,32 @@
+uuid: a08dd331-ed7e-45f6-8b04-8327652083cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.dohomework.bai_tap
+    - field.field.node.dohomework.lop
+    - node.type.dohomework
+  module:
+    - field_layout
+    - layout_discovery
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: node.dohomework.teaser
+targetEntityType: node
+bundle: dohomework
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  bai_tap: true
+  langcode: true
+  lop: true

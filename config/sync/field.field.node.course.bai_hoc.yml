@@ -1,0 +1,43 @@
+uuid: c230fde6-2bd8-4a29-bbad-7d4830e2b2ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.bai_hoc
+    - node.type.course
+    - paragraphs.paragraphs_type.lesson
+  module:
+    - entity_reference_revisions
+id: node.course.bai_hoc
+field_name: bai_hoc
+entity_type: node
+bundle: course
+label: 'Bài học'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      lesson: lesson
+    negate: 0
+    target_bundles_drag_drop:
+      from_library:
+        weight: 6
+        enabled: false
+      lesson:
+        weight: 7
+        enabled: true
+      multiple_choice:
+        weight: 8
+        enabled: false
+      question:
+        weight: 9
+        enabled: false
+      single_choice:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

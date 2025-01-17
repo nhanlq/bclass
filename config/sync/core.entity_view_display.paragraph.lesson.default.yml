@@ -1,0 +1,57 @@
+uuid: f93fca16-d2ba-400e-84fb-dbbdd8a34413
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.lesson.homework
+    - field.field.paragraph.lesson.lesson_name
+    - field.field.paragraph.lesson.question
+    - field.field.paragraph.lesson.tai_lieu
+    - paragraphs.paragraphs_type.lesson
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.lesson.default
+targetEntityType: paragraph
+bundle: lesson
+mode: default
+content:
+  homework:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  lesson_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  question:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  tai_lieu:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

@@ -1,0 +1,10 @@
+uuid: 7ac5c4ad-87dd-487d-92f7-bf2a32c21180
+langcode: en
+status: true
+dependencies: {  }
+id: lesson
+label: Lesson
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.question.answers
+    - field.field.paragraph.question.audio
     - field.field.paragraph.question.number
     - field.field.paragraph.question.question
+    - field.field.paragraph.question.video
     - paragraphs.paragraphs_type.question
   module:
     - entity_reference_revisions
@@ -31,6 +33,15 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  audio:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
   number:
     type: number_integer
     label: above
@@ -46,5 +57,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
+    region: content
+  video:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 4
     region: content
 hidden: {  }

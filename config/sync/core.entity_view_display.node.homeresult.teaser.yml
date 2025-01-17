@@ -1,0 +1,42 @@
+uuid: e585d02d-5f1c-4928-8970-89bd6c8c8e0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.homeresult.bai_tap
+    - field.field.node.homeresult.comment
+    - field.field.node.homeresult.hoc_vien
+    - field.field.node.homeresult.lop
+    - field.field.node.homeresult.result
+    - field.field.node.homeresult.total_score
+    - field.field.node.homeresult.training
+    - node.type.homeresult
+  module:
+    - field_layout
+    - layout_discovery
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: node.homeresult.teaser
+targetEntityType: node
+bundle: homeresult
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  bai_tap: true
+  comment: true
+  hoc_vien: true
+  langcode: true
+  lop: true
+  result: true
+  total_score: true
+  training: true

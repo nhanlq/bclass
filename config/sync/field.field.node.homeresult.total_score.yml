@@ -1,0 +1,23 @@
+uuid: 95397837-7a3d-4bc8-a319-a14bab0b4199
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.total_score
+    - node.type.homeresult
+id: node.homeresult.total_score
+field_name: total_score
+entity_type: node
+bundle: homeresult
+label: 'Total Score'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

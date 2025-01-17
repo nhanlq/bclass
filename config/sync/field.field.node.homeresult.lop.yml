@@ -1,0 +1,29 @@
+uuid: bbbb4526-9a86-4654-b4de-45e8852d8b86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.lop
+    - node.type.class
+    - node.type.homeresult
+id: node.homeresult.lop
+field_name: lop
+entity_type: node
+bundle: homeresult
+label: Lớp
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      class: class
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

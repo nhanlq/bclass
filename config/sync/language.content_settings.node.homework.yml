@@ -1,0 +1,11 @@
+uuid: 34a3cf84-98df-4f04-832c-8da9cdb9ac5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.homework
+id: node.homework
+target_entity_type_id: node
+target_bundle: homework
+default_langcode: site_default
+language_alterable: false

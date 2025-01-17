@@ -1,0 +1,18 @@
+uuid: 654b445b-e54b-46b1-a93f-7519608b1570
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.class
+id: node.class.title
+field_name: title
+entity_type: node
+bundle: class
+label: 'Tên lớp'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

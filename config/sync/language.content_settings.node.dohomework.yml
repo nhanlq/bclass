@@ -1,0 +1,11 @@
+uuid: a714f8e0-8c54-4e67-b49e-8faa1d4caf50
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dohomework
+id: node.dohomework
+target_entity_type_id: node
+target_bundle: dohomework
+default_langcode: site_default
+language_alterable: false

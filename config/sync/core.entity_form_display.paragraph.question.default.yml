@@ -4,12 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.question.answers
+    - field.field.paragraph.question.audio
     - field.field.paragraph.question.number
     - field.field.paragraph.question.question
+    - field.field.paragraph.question.video
     - paragraphs.paragraphs_type.question
   module:
     - field_layout
     - layout_discovery
+    - media_library
     - paragraphs
     - text
 third_party_settings:
@@ -41,6 +44,13 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
+  audio:
+    type: media_library_widget
+    weight: 4
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
   number:
     type: number
     weight: 0
@@ -55,6 +65,13 @@ content:
     settings:
       rows: 5
       placeholder: ''
+    third_party_settings: {  }
+  video:
+    type: media_library_widget
+    weight: 5
+    region: content
+    settings:
+      media_types: {  }
     third_party_settings: {  }
 hidden:
   created: true
